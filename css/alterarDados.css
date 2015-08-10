@@ -1,0 +1,12 @@
+ form#simples {
+    min-width: 433px;
+    padding: 0px;
+    margin:auto;
+    width: 55%;
+}
+
+div.camposFormularioSimples div.inputs{
+    max-width: 310px;
+    padding: 0px;
+    margin:auto;
+}

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+header#principal{
+    margin-top: 22px;
+    min-width: 980px;
+    width: 100%;
+    height: 56px;
+    background-color: #004c98;
+}
+
+header#principal div{
+    float: left;
+}
+
+header#principal div#logo{
+    height: 100%;
+    width: 240px;
+}
+
+header#principal div#tituloSistema{
+    padding: 10px 0 0 10px;
+    font-size: 18pt;
+    color: white;
+    height: 100%;
+}
+
+header#principal div#menuUsuario{
+    background-image: url('../imagens/backgroundMenuUsuario.jpg');
+    float: right;
+    color: white;
+    position: relative;
+    right: 20px;
+    min-height: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 200px;
+    padding: 10px 10px;
+}
+
+a#logout{
+    background-color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0 10px;
+}
+
+section#menuSistema{
+    min-width: 980px;
+    padding: 15px 0 25px 0;
+    width: 100%;
+}
+
+section#menuSistema div#separador{
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 8px;
+    width: 100%;
+    background-color: #0f1f30;
+}
+
+section#menuSistema ul {
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    display: inline-block;
+    float: right;
+    margin:0px;
+    background-color:white;
+    list-style:none;
+}
+
+section#menuSistema ul li {
+    display: inline;
+    margin: 5px 0;
+    padding: 0 10px 0 5px;
+    border-right: 1px solid black;
+}
+
+section#menuSistema ul li:last-child {
+    border-right: none;
+}

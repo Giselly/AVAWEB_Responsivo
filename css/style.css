@@ -1,0 +1,273 @@
+/** CONFIGURAÇÃO GERAL DO SITE */
+p {
+    font-size: 14pt;
+}
+
+/** CONFIGURAÇÃO DO MENU LATERAL */
+aside#paginas{
+    width: 320px;
+    background-color: #e3e2e2;
+}
+
+img#fotoUsuario{
+    height: 140px;
+    border-radius: 85px;
+    border: 5px solid #004c98;
+    margin: 20px auto 20px 81px;
+}
+
+nav#menuLateral li{
+    list-style: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid black;
+}
+
+nav#menuLateral li:first-child{
+    border-top: none; 
+}
+
+nav#menuLateral li:last-child{
+    border-bottom: none; 
+}
+
+nav#menuLateral li a{
+    display: block;
+    color: #0d1e2e;
+    width: 90%;
+    padding: 15px;
+}
+
+nav#menuLateral li a{
+    color: #0d1e2e;
+}
+
+nav#menuLateral li a:hover, nav#menuLateral li a.selecionado{
+    background-color: white;
+}
+
+/** CONFIGURAÇÃO DO RODAPE */
+footer#rodape{
+    z-index: 20;
+    position:fixed;
+    display: block;
+    background-color: white;
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid black;
+    bottom: 0px;
+
+}
+
+footer#rodape div{
+    width: 100%;
+    background-color: #0f1f30;
+    bottom: 0px;
+
+}
+
+footer#rodape p {
+    width: 1000px;
+    text-align: center;
+    padding: 10px;
+    font-size: 10pt;
+    color: white;
+    margin: 0px auto;
+}
+
+/**********************| LISTAGEM |**********************/
+
+section.listagemCadastro {
+    width: 83%;
+    margin: auto;
+    position: relative;
+}
+
+div.camposSection {
+    position: relative;
+    background-color: white;
+    height: auto;
+    margin: auto;
+    border-radius: 3px;
+    width: 95%;
+    padding: 10px;
+}
+
+table.listagem {
+    position: relative;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+}
+
+table.listagem td:not(.align-left) {
+    text-align: center;
+}
+
+table.listagem td {   
+    border: 1px solid #c9c9c9;
+    padding: 10px;  
+}
+
+table.listagem th {
+    background-color: #797979;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table.listagem tr:nth-child(odd)  td {
+    background-color: #f1f1f1;
+    color: #797979;
+}
+
+table.listagem tr:nth-child(even) td {
+    background-color: #ffffff;
+    color: #797979;
+}
+
+table.listagem tr:hover td {
+    background:#b3b3b3;
+    color: #fff;
+}
+
+table.listagem tr td a {
+    color: #004c98;
+    text-decoration: none;
+}
+
+table.listagem tr:hover td a{
+    color: #fff;
+}
+
+table.listagem tr td:hover a {
+    text-decoration: underline;
+}
+
+/**********************| BOTÕES |**********************/
+.novo {
+    position: relative;
+    width: auto;
+    background: #004c98;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin: 0px 15px 15px 0px;
+}
+
+.alterar {
+    position: relative;
+    width: auto;
+    background: #004c98;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 4px 10px;
+    margin: 0 15px 15px 15px ;
+}
+
+/**********************| FORMULÁRIO |**********************/
+
+form.cadastro{
+    padding: 20px;
+    min-width: 430px;
+    width: 76.8229%;
+    min-height: 500px;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #F7F7F7;
+}
+
+div.inputs{
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+input[type=password], input[type=text], input[type=email], select{
+    width: 300px;
+    height: 25px;
+    margin: 0px 15px 15px 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding-left: 5px;
+}
+
+input[type=radio]{
+    padding: 0px;
+    margin: 0px 0px 0px 15px ;
+}
+
+input[type=file] {
+    margin-left: 15px;
+}
+
+label {
+    margin: 15px 15px 0 15px;
+    color: #2e2e2e;
+}
+
+p#tituloPrincipal {
+    position: relative;
+    font-size: 14pt;
+    color: #004c98;
+    margin-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+form.cadastro p.subtitulo {
+    position: relative;
+    display: block;
+    font-size: 14pt;
+    color: #fff;
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: #004c98;
+    text-align: left;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/** FORM SIMPLES */
+
+ form#simples {
+    min-width: 433px;
+    padding: 0px;
+    margin:auto;
+    width: 55%;
+}
+
+div.camposFormularioSimples div.inputs{
+    max-width: 310px;
+    padding: 0px;
+    margin:auto;
+}
+
+
+/**********************| PESQUISA |**********************/
+
+input.pesquisa {
+    display: block;
+    position: relative;
+    float: right;
+    border-radius: 10px;
+    border: 1px solid #797878;
+    margin-right: 0px;
+    padding-right: 0px;
+    float: right;
+    height: 30px;
+    width: 250px;
+}
