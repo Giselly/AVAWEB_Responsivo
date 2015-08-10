@@ -6,6 +6,8 @@
         <base href="<?php echo RAIZ; ?>">
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/login.js"></script>
+        <script src="js/mascaras.js"></script>
+        <script src="js/jquery.mask.js"></script>
         <link rel="stylesheet" type="text/css" href="css/login.css">
         <link rel="shortcut icon" href="imagens/icon.ico" type="image/gif">
     </head>
@@ -27,7 +29,7 @@
                     <form id="areaLogin" name="login">
                         <h1>Portal Aluno</h1>
                         <div id="inputs">
-                            <input type="text" name="usuario" class="id" id="id"  required="required" maxlength="24" placeholder="CPF" >
+                            <input type="text" name="usuario" class="cpf" id="id"  required="required" maxlength="14" placeholder="CPF" >
                             <br />
                             <input type="password" name="senha" class="log" id="pass" required="required"  maxlength="20" placeholder="Senha">
                             <br />

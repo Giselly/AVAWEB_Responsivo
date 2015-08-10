@@ -12,7 +12,7 @@ define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', 'vertrigo');
 define('DBSA', 'avaweb');
-define('RAIZ', 'http://localhost:8080/AvaWeb/');
+define('RAIZ', 'http://localhost/Mauricio/AVAWEB_Responsivo/');
 
 // AUTO LOAD DE CLASSES ########################################################
 function __autoload($Class) {
