@@ -2,6 +2,11 @@
 p {
     font-size: 14pt;
 }
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
 /** CONFIGURAÇÃO DO MENU LATERAL */
 aside#paginas{
@@ -55,7 +60,14 @@ footer#rodape{
     padding-top: 18px;
     border-top: 1px solid black;
     bottom: 0px;
-
+    height: 60px;
+    text-align: center;
+    
+}
+.tudo {
+   min-height:100%;
+   position:relative;
+   display: block;
 }
 
 footer#rodape div{
@@ -66,7 +78,7 @@ footer#rodape div{
 }
 
 footer#rodape p {
-    width: 1000px;
+    width: 52.0833%;
     text-align: center;
     padding: 10px;
     font-size: 10pt;
