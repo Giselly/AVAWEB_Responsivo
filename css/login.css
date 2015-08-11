@@ -13,17 +13,18 @@ body{
 
 
 #fundoAzul {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 275px;
     background-color: #004c98;
-    margin-top: 15%;
+    top: 30%;
     z-index: 1;
 }
 
 #login {
     position: relative;
     width: 980px;
+    height: 275px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -201,4 +202,8 @@ a#bola {
     position: relative;
     margin-left: 280px;
     margin-right: 8px;
+}
+
+a#bola:hover {
+    text-decoration: none;
 }

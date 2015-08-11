@@ -8,7 +8,7 @@
         <script src="js/login.js"></script>
         <!--<script src="js/mascaras.js"></script>-->
         <!--<script src="js/jquery.mask.js"></script>-->
-        <link rel="stylesheet" type="text/css" media="all" href="css/login.css"/>
+        <link rel="stylesheet" type="text/css" href="css/login.css"/>
         <link rel="shortcut icon" href="imagens/icon.ico" type="image/gif"/>
     </head>
     <body>
