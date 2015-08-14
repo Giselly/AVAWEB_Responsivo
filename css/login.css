@@ -9,6 +9,7 @@
 body{
     min-width: 50%;
     font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -23,7 +24,7 @@ body{
 
 #login {
     position: relative;
-    width: 980px;
+    width: 72.6464047443%;
     height: 275px;
     margin-left: auto;
     margin-right: auto;
@@ -34,6 +35,8 @@ body{
 #areaLogin {
     position: relative;
     float: right;
+    width: 36.9387755102%;
+    height: 82.9090909091%;
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -115,7 +118,6 @@ a {
 a:hover {
     position: relative;
     color: #000;
-    text-decoration: underline;
 }
 
 #info {
@@ -186,7 +188,7 @@ a#link-esqueceu-senha:hover {
 
 #imagens {
     position: relative;
-    width: 600px;
+    width: 61.2244897959%;
     height: 276px;
     float: left;
     z-index: 100;
@@ -194,6 +196,8 @@ a#link-esqueceu-senha:hover {
 
 #computador {
     position: relative;
+    max-width: 100%;
+    height: auto;
     margin-top: -28px;
     margin-bottom: -50px;
 }
@@ -207,3 +211,108 @@ a#bola {
 a#bola:hover {
     text-decoration: none;
 }
+
+/*Media Queries*/
+@media all and (max-width:1349px){
+    #login {
+        margin-left: 65px;
+    }
+    
+    #areaLogin {
+        margin-left: 10px;
+    }
+    
+    #computador {
+        margin: auto;
+    }
+    
+    a#bola,a#bolaSelecionada {
+      display: none;
+    }
+}
+
+@media all and (max-width:1345px){
+     #fundoAzul {
+        height: 243px;
+    }
+    
+     #imagens {
+        margin-top: -38px;
+    }
+}
+
+@media all and (max-width:1227px){
+     #fundoAzul {
+        height: 244px;
+    }
+    
+     #imagens {
+        margin-top: -28px;
+    }
+}
+
+@media all and (max-width:1160px){
+    #fundoAzul {
+        height: 246px;
+    }
+    
+    #imagens {
+        margin-top: -5px;
+    }
+}
+
+@media all and (max-width:1014px){
+    #fundoAzul {
+        height: 237px;
+    }
+    
+    #imagens {
+        margin-top: -5px;
+    }
+}
+
+@media all and (max-width:992px){
+    
+    #imagens {
+        float: left;
+        margin-left: -35px;
+        margin-top: 5px;
+    }
+    
+    #areaLogin {
+        float: right;
+        margin-right:-15px;
+        width: 272px;
+    }
+}
+
+@media all and (max-width:939px){
+    #imagens {
+        display: none;
+    }
+    
+    #areaLogin {
+        float: left;
+        margin-left: 30%;
+    }
+}
+
+@media all and (max-width:568px){
+    body {
+        background-color: #004C98;
+    }
+    
+    #areaLogin {
+        margin-left: -25px;
+    }
+    
+    p#info {
+        width: 93%;
+    }
+    
+    input[type=text], input[type=password], input[type=email] {
+        width: 95%;
+    }
+    
+}
+

@@ -14,9 +14,8 @@
 
         <div id="fundoAzul">
             <div id="login">
-                <div id="login">
                     <div id="imagens">
-                        <img id="computador" src="imagens/computador1.jpg">
+                        <img id="computador" src="imagens/computador1.png">
                         <a id="bola" href="">
                             <img id="bola1" src="imagens/bolaSelecionada.png">
                         </a>
@@ -35,7 +34,6 @@
                             <input value="Enviar email" type="submit" id="button" name="enviar">
                         </div>
                     </form>
-                </div>
             </div>
         </div>
     </body>

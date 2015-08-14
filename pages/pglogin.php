@@ -2,6 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ambiente Virtual de Aprendizagem</title>
         <base href="<?php echo RAIZ; ?>">
         <script src="js/jquery-2.1.4.min.js"></script>
@@ -17,7 +18,7 @@
         <div id="fundoAzul">
             <div id="login">
                 <div id="imagens">
-                    <img id="computador" src="imagens/computador1.jpg">
+                    <img id="computador" src="imagens/computador1.png">
                     <a id="bola" class="slider" href="1">
                         <img id="bola1" src="imagens/bolaSelecionada.png">
                     </a>
