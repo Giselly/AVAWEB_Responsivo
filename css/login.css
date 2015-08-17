@@ -9,7 +9,7 @@
 body{
     min-width: 50%;
     font-family: 'Trebuchet MS', sans-serif;
-    overflow: hidden;
+    overflow-y:scroll;
 }
 
 
@@ -232,42 +232,37 @@ a#bola:hover {
 }
 
 @media all and (max-width:1345px){
-     #fundoAzul {
-        height: 243px;
-    }
-    
-     #imagens {
-        margin-top: -38px;
-    }
-}
-
-@media all and (max-width:1227px){
-     #fundoAzul {
-        height: 244px;
-    }
     
      #imagens {
         margin-top: -28px;
     }
 }
 
-@media all and (max-width:1160px){
-    #fundoAzul {
-        height: 246px;
-    }
+@media all and (max-width:1235px){
     
-    #imagens {
-        margin-top: -5px;
+     #imagens {
+        margin-top: -18px;
     }
 }
 
-@media all and (max-width:1014px){
-    #fundoAzul {
-        height: 237px;
-    }
+@media all and (max-width:1168px){
     
     #imagens {
-        margin-top: -5px;
+        margin-top: 3px;
+    }
+}
+
+@media all and (max-width:1046px){
+    
+    #imagens {
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width:1030px){
+    
+    #imagens {
+        margin-top: 15px;
     }
 }
 
@@ -276,7 +271,7 @@ a#bola:hover {
     #imagens {
         float: left;
         margin-left: -35px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
     
     #areaLogin {
@@ -291,9 +286,19 @@ a#bola:hover {
         display: none;
     }
     
+    #login {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-left: 0px;
+    }
+    
     #areaLogin {
-        float: left;
-        margin-left: 30%;
+        width: 365px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        float: none;
     }
 }
 
@@ -302,8 +307,18 @@ a#bola:hover {
         background-color: #004C98;
     }
     
+    #login {
+        display: block;
+        width:auto;
+        height: 275px;
+        margin-left: 0px;
+    }
+    
     #areaLogin {
-        margin-left: -25px;
+        width: 85%;
+        position: relative;
+        margin: -60px auto;
+        float: none;
     }
     
     p#info {
