@@ -63,7 +63,7 @@
             <div></div>
         </nav>
         <!--Menu Slider SCREEN MOVEL-->
-        <section id="nav-slide" >
+        <section id="nav-slide">
         	<br>
             <p><a href="treinamento" id="menu_slider">Treinamento</a></p><br>
             <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>
