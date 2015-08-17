@@ -1,344 +1,95 @@
 @charset "UTF-8";
-/*Media Queries SCREEN >= 856px - FULL SCREEN*/
-@media only screen and (min-width:856px){
-	* {
-		padding: 0;
-		margin: 0;
-		border: 0;
-	}
-	a {
-		text-decoration: none;
-	}
-	body {
-		background-color: #ffffff;
-		font-family: 'Trebuchet MS', sans-serif;
-	}
-	header#principal{
-		margin-top: 22px;
-		min-width: 980px;
-		width: 100%;
-		height: 56px;
-		background-color: #004c98;
-	}
-	header#principal div{
-		float: left;
-	}
-	header#principal div#logo{
-		max-width:240px;
-		height: auto;
-		width: 100%;
-	}
-	header#principal div#logo_res2{
-		display:none;
-	}
-	header#principal div#logo_res{
-		display:none;
-	}
-	header#principal div#tituloSistema{
-		padding: 10px 0 0 10px;
-		font-size: 18pt;
-		color: white;
-		height: 100%;
-	}
-	header#principal div#menuUsuario{
-		background-image: url('../imagens/backgroundMenuUsuario.jpg');
-		float: right;
-		color: white;
-		position: relative;
-		right: 20px;
-		min-height: 20px;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		min-width: 200px;
-		padding: 10px 10px;
-	}
-	a#logout{
-		background-color: white;
-		border-radius: 5px;
-		padding: 4px 10px;
-		margin: 0 10px;
-	}
-	a#logout2{
-		background-color: white;
-		border-radius: 5px;
-		padding: 4px 10px;
-		margin: 0 10px;
-		display:none;
-	}
-	section#menuSistema{
-		min-width: 980px;
-		padding: 15px 0 25px 0;
-		width: 100%;
-	}
-	section#menuSistema div#separador{
-		position: relative;
-		display: inline-block;
-		float: right;
-		height: 8px;
-		width: 100%;
-		background-color: #0f1f30;
-	}
-	section#menuSistema ul {
-		position: relative;
-		top: -15px;
-		padding: 0 10px;
-		display: inline-block;
-		float: right;
-		margin:0px;
-		background-color:white;
-		list-style:none;
-	}
-	section#menuSistema ul li {
-		display: inline;
-		margin: 5px 0;
-		padding: 0 10px 0 5px;
-		border-right: 1px solid black;
-	}
-	section#menuSistema ul li:last-child {
-		border-right: none;
-	}
-	#nav-slide{
-		display:none;
-	}
-}
-/*Media Queries SCREEN >= 530px AND <= 855px - MEDIUM SCREEN*/	
-@media only screen and (min-width:530px) and (max-width:855px){
-	* {
+* {
     padding: 0;
     margin: 0;
     border: 0;
-	}
-	a {
-		text-decoration: none;
-	}
-	body {
-		background-color: #ffffff;
-		font-family: 'Trebuchet MS', sans-serif;
-	}
-	header#principal{
-		margin-top: 12px;
-		min-width: 500px;
-		width: 100%;
-		height: 45px;
-		background-color: #004c98;
-		font-size:18px;
-	}
-	header#principal div{
-		float: left;
-	}
-	header#principal div#logo{
-		max-width:100%;
-		height: auto;
-		width: 55px;
-		display:none;
-	}
-	header#principal div#logo_res{
-		display:none;
-	}
-	header#principal div#logo_res2{
-		max-width:100%;
-		height: auto;
-		width: 55px;
-	}
-	header#principal div#tituloSistema{
-		padding: 11px 0 0 130px;
-		font-size: 13pt;
-		color: white;
-		height: 100%;
-	}
-	header#principal div#menuUsuario{
-		background-image: url('../imagens/backgroundMenuUsuario.jpg');
-		float: right;
-		color: white;
-		position: relative;
-		right: 12px;
-		min-height: 12px;
-		border-bottom-left-radius: 3.5px;
-		border-bottom-right-radius: 3.5px;
-		min-width: 250px;
-		padding: 7px 7px;
-		display:none;
-	}
-	a#logout{
-		display:none;
-	}
-	a#logout2{
-		background-color: white;
-		border-radius: 7px;
-		padding: 3px 7px 3px 7px;
-		margin: 8px 8px;
-		height:50%;
-		float:right;
-	}
-	#menu_sair{
-		float: right;
-		color: white;
-		position: relative;
-		right: 12px;
-		min-height: 12px;
-		border-bottom-left-radius: 3.5px;
-		border-bottom-right-radius: 3.5px;
-		min-width: 250px;
-		padding: 7px 7px;
-		display:none;
-		margin-top:35px;
-	}
-	section#menuSistema{
-		min-width: 400px;
-		padding: 11px 0 11px 0;
-		width: 100%;
-	}
-	section#menuSistema div#separador{
-		position: relative;
-		display: inline-block;
-		float: right;
-		height: 5px;
-		width: 100%;
-		background-color: #0f1f30;
-	}
-	section#menuSistema ul {
-		position: relative;
-		top: -12px;
-		padding: 0 8px;
-		display: inline-block;
-		float: right;
-		margin:0px;
-		background-color:white;
-		list-style:none;
-	}
-	section#menuSistema ul li {
-		display: inline;
-		margin: 2.5px 0;
-		padding: 0 7px 0 2.5px;
-		border-right: 1px solid black;
-	}
-	section#menuSistema ul li:last-child {
-		border-right: none;
-	}
-	#nav-slide{
-		display:none;
-	}
+
 }
-/*Media Queries SCREEN <= 529px - MOVEL SCREEN*/	
-@media only screen and (max-width:529px){
-	* {
-		padding: 0;
-		margin: 0;
-		border: 0;	
-	}
-	a{ 
-		color:#FFF;
-	}
-	header#principal div#logo{
-		display:none;
-	}
-	header#principal div#logo_res{
-		max-width:100%;
-		height: auto;
-		width: 55px;
-		margin-left:0%;
-	}
-	header#principal div#logo_res2{
-		display:none;
-	}
-	header#principal div#tituloSistema{
-		padding: 8px 0 0 0;
-		font-size: 8pt;
-		color: white;
-		height: 100%;
-		font-family:"Arial Black", Gadget, sans-serif;
-		position:absolute;
-	}
-	header#principal div#menuUsuario{
-		display:none;
-	}
-	header#principal{
-		margin-top: 1px;
-		min-width: 500px;
-		width: 100%;
-		height: 30px;
-		background-color: #004c98;
-	}
-	header#principal div{
-		margin:0%;
-		margin-left:35px;
-		position:absolute;
-	}
-	a#logout{
-		display:none;
-	}
-	a#logout2{
-		display:none;
-	}
-	#menuSistema{
-		display:none;
-	}
-	section#menuSistema ul li {
-		display: inline;
-		margin: 2.5px 0;
-		padding: 0 7px 0 2.5px;
-		border-right: 1px solid black;
-	}
-	/*Menu Slider Movel*/
-	a#menu_slider{
-		background-color: white;
-		border-radius: 5px;
-		padding: 4px 4px 4px 4px;
-		margin: 2px 8px;
-		height:270px;
-		color:#09F;
-		margin-left:5%;
-		position:relative;
-		text-decoration:none;
-		font-size:16px;
-	}
-	a#menu_slider_logout{
-		background-color: white;
-		border-radius: 5px;
-		padding: 4px 4px 4px 4px;
-		margin: 2px 8px;
-		height:45%;
-		color:#F00;
-		margin-left:5%;
-		position:relative;
-		text-decoration:none;
-		font-size:16px;
-	}
-	#nav-btn{
-		position: fixed;
-		top: 3px;
-		right: 1%;
-		/*border: #Bababa 1px solid;
-			border-radius: 3px;*/
-		padding: 1px 6px;
-		cursor: pointer;
-		background-color: #003A75;
-		transition: all 0.4s linear;
-	}
-	
-	/*#nav-btn:hover{
-			#FFF 4px solid;
-	}*/
-	#nav-btn > div{
-		width: 20px;
-		height: 3px;
-		background: #FFFFFF;
-		margin: 4px 0px;
-		transition: all 0.4s linear;
-	}
-	/*#nav-btn:hover div{
-		background: #09F;
-	}*/
-	#nav-slide{
-		max-height: 270px;
-		position: fixed;
-		right: -250px;
-		margin-top:1%;
-		top: 30px;
-		width: 200px;
-		background: #004c98;
-		transition: right 0.4s linear;
-		color:#FFF;
-		border:double;
-	}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+header#principal{
+    margin-top: 22px;
+    min-width: 980px;
+    width: 100%;
+    height: 56px;
+    background-color: #004c98;
+}
+
+header#principal div{
+    float: left;
+}
+
+header#principal div#logo{
+    height: 100%;
+    width: 240px;
+}
+
+header#principal div#tituloSistema{
+    padding: 10px 0 0 10px;
+    font-size: 18pt;
+    color: white;
+    height: 100%;
+}
+
+header#principal div#menuUsuario{
+    background-image: url('../imagens/backgroundMenuUsuario.jpg');
+    float: right;
+    color: white;
+    position: relative;
+    right: 20px;
+    min-height: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 200px;
+    padding: 10px 10px;
+}
+
+a#logout{
+    background-color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0 10px;
+}
+
+section#menuSistema{
+    min-width: 980px;
+    padding: 15px 0 25px 0;
+    width: 100%;
+}
+
+section#menuSistema div#separador{
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 8px;
+    width: 100%;
+    background-color: #0f1f30;
+}
+
+section#menuSistema ul {
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    display: inline-block;
+    float: right;
+    margin:0px;
+    background-color:white;
+    list-style:none;
+}
+
+section#menuSistema ul li {
+    display: inline;
+    margin: 5px 0;
+    padding: 0 10px 0 5px;
+    border-right: 1px solid black;
+}
+
+section#menuSistema ul li:last-child {
+    border-right: none;
 }
