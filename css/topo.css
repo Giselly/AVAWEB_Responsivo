@@ -360,7 +360,7 @@
 		z-index:10000;
 	}
 }
-/*Media Queries SCREEN <=370px - SUPER MOVEL SCREEN*/	
+/*Media Queries SCREEN <370px - SUPER MOVEL SCREEN*/	
 @media all and (max-width:369px){
 	* {
 		padding: 0;
@@ -471,7 +471,7 @@
 		transition: all 0.4s linear;
 	}
 	#nav-slide{
-		max-height: 430px;
+		max-height: 400px;
 		position: absolute;
 		right: -250px;
 		margin-top:1%;
