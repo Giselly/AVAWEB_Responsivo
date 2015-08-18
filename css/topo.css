@@ -290,7 +290,7 @@
 		border-radius: 5px;
 		padding: 4px 4px 4px 4px;
 		margin: 2px 8px;
-		height:270px;
+		height:380px;
 		color:#FFFFFF;
 		margin-left:5%;
 		position:relative;
@@ -348,5 +348,6 @@
 		transition: right 0.4s linear;
 		color:#FFF;
 		border-radius:5px;
+		z-index:10000;
 	}
 }

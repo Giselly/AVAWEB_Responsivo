@@ -5,17 +5,17 @@
 
             <div>
                 <label for="senhaAtual">Senha atual:</label><br/>
-                <input type="password" name="senhaAtual" />
+                <input type="password" name="senhaAtual" required/>
             </div>
 
             <div>
                 <label for="novaSenha">Nova senha:</label><br/>
-                <input type="password" name="novaSenha" />
+                <input type="password" name="novaSenha" required/>
             </div>
 
             <div>
                 <label for="confirmarSenha">Confirmar senha:</label><br/>
-                <input type="password" name="confirmarSenha" />
+                <input type="password" name="confirmarSenha" required/>
             </div>
 
             <div>

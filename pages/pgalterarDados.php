@@ -7,27 +7,27 @@
             ?>
             <div>
                 <label for="nome">Nome completo:</label><br/>
-                <input type="text" name="nome" value="<?php echo isset($dadosUsuario[0]['nome']) ? $dadosUsuario[0]['nome'] : ''; ?>" />
+                <input type="text" name="nome" required value="<?php echo isset($dadosUsuario[0]['nome']) ? $dadosUsuario[0]['nome'] : ''; ?>" />
             </div>
 
             <div>
                 <label for="apelido">Nome curto:</label><br/>
-                <input type="text" name="apelido" value="<?php echo isset($dadosUsuario[0]['apelido']) ? $dadosUsuario[0]['apelido']: ''; ?>" />
+                <input type="text" name="apelido" required value="<?php echo isset($dadosUsuario[0]['apelido']) ? $dadosUsuario[0]['apelido']: ''; ?>" />
             </div>
 
             <div>
                 <label for="email">Email:</label><br/>
-                <input type="text" name="email" value="<?php echo isset($dadosUsuario[0]['email']) ? $dadosUsuario[0]['email'] : ''; ?>" />
+                <input type="email" name="email" required value="<?php echo isset($dadosUsuario[0]['email']) ? $dadosUsuario[0]['email'] : ''; ?>" />
             </div>
 
             <div>
                 <label for="login">Login:</label><br/>
-                <input type="text" name="login" value="<?php echo isset($dadosUsuario[0]['login']) ? $dadosUsuario[0]['login']: ''; ?>" />
+                <input type="text" name="login" required value="<?php echo isset($dadosUsuario[0]['login']) ? $dadosUsuario[0]['login']: ''; ?>" />
             </div>
             
             <div>
                 <label for="telefone">Telefone:</label><br/>
-                <input type="text" class="fone" name="telefone" value="<?php echo isset($dadosUsuario[0]['telefone']) ? $dadosUsuario[0]['telefone'] : ''; ?>" />
+                <input type="text" class="fone" required name="telefone" value="<?php echo isset($dadosUsuario[0]['telefone']) ? $dadosUsuario[0]['telefone'] : ''; ?>" />
             </div>
  
             <!--<div>
