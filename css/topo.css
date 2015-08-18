@@ -28,10 +28,13 @@
 		height: auto;
 		width: 100%;
 	}
+	header#principal div#logo_res{
+		display:none;
+	}
 	header#principal div#logo_res2{
 		display:none;
 	}
-	header#principal div#logo_res{
+	header#principal div#logo_res3{
 		display:none;
 	}
 	header#principal div#tituloSistema{
@@ -140,6 +143,9 @@
 		height: auto;
 		width: 55px;
 	}
+	header#principal div#logo_res3{
+		display:none;
+	}
 	header#principal div#tituloSistema{
 		padding: 11px 0 0 130px;
 		font-size: 13pt;
@@ -219,8 +225,8 @@
 		display:none;
 	}
 }
-/*Media Queries SCREEN <= 529px - MOVEL SCREEN*/	
-@media all and (max-width:529px){
+/*Media Queries SCREEN >=370px AND <=529px - MOVEL SCREEN*/	
+@media all and (min-width:370px) and (max-width:529px){
 	* {
 		padding: 0;
 		margin: 0;
@@ -243,6 +249,144 @@
 	}
 	header#principal div#logo_res2{
 		display:none;
+	}
+	header#principal div#logo_res3{
+		display:none;
+	}
+	header#principal div#tituloSistema{
+		padding: 9.5px 0 0 0;
+		font-size: 10.5pt;
+		color: white;
+		height: 100%;
+		font-family:"Arial Black", Gadget, sans-serif;
+		position:absolute;
+	}
+	header#principal div#menuUsuario{
+		display:none;
+	}
+	header#principal{
+		margin-top: 1px;
+		min-width: 500px;
+		width: 100%;
+		height: 40px;
+		background-color: #004c98;
+	}
+	header#principal div{
+		margin:0%;
+		margin-left:45px;
+		position:absolute;
+	}
+	a#logout{
+		display:none;
+	}
+	a#logout2{
+		display:none;
+	}
+	#menuSistema{
+		display:none;
+	}
+	#paginas{
+		display:none;
+	}
+	section#menuSistema ul li {
+		display: inline;
+		margin: 2.5px 0;
+		padding: 0 7px 0 2.5px;
+		border-right: 1px solid black;
+	}
+	/*Menu Slider Movel*/
+	a#menu_slider{
+		border-radius: 5px;
+		padding: 4px 4px 4px 4px;
+		margin: 2px 8px;
+		height:380px;
+		color:#FFFFFF;
+		margin-left:5%;
+		position:relative;
+		text-decoration:none;
+		font-size:16px;
+	}
+	a#menu_slider_logout{
+		border-radius: 5px;
+		padding: 4px 4px 4px 4px;
+		margin: 2px 8px;
+		height:45%;
+		color:#FFFFFF;
+		margin-left:5%;
+		position:relative;
+		font-size:16px;
+	}
+	a#menu_slider_logout:hover{
+		text-decoration:none ;
+
+	}
+
+	#nav-btn{
+		position: absolute;
+		top: 3px;
+		right: 1%;
+		/*border: #Bababa 1px solid;
+			border-radius: 3px;*/
+		padding: 4.2px 9px;
+		cursor: pointer;
+		background-color: #003A75;
+		transition: all 0.4s linear;
+	}
+	
+	/*#nav-btn:hover{
+			#FFF 4px solid;
+	}*/
+	#nav-btn > div{
+		width: 22px;
+		height: 4px;
+		background: #FFFFFF;
+		margin: 4px 0px;
+		transition: all 0.4s linear;
+	}
+	/*#nav-btn:hover div{
+		background: #09F;
+	}*/
+	#nav-slide{
+		max-height: 400px;
+		position: absolute;
+		right: -250px;
+		margin-top:1%;
+		top: 40px;
+		width: 200px;
+		background: #004c98;
+		transition: right 0.4s linear;
+		color:#FFF;
+		border-radius:5px;
+		z-index:10000;
+	}
+}
+/*Media Queries SCREEN <=370px - SUPER MOVEL SCREEN*/	
+@media all and (max-width:369px){
+	* {
+		padding: 0;
+		margin: 0;
+		border: 0;	
+	}
+	a{ 
+		color:#FFF;
+	}
+	section#conteudo{
+		margin-top:1%;
+	}
+	header#principal div#logo{
+		display:none;
+	}
+	header#principal div#logo_res{
+		display:none;
+	}
+	header#principal div#logo_res2{
+		display:none;
+	}
+	header#principal div#logo_res3{
+		max-width:100%;
+		height: auto;
+		width: 55px;
+		margin-left:0%
 	}
 	header#principal div#tituloSistema{
 		padding: 8px 0 0 0;
@@ -309,36 +453,25 @@
 	}
 	a#menu_slider_logout:hover{
 		text-decoration:none ;
-
 	}
-
 	#nav-btn{
 		position: absolute;
 		top: 3px;
 		right: 1%;
-		/*border: #Bababa 1px solid;
-			border-radius: 3px;*/
 		padding: 1px 6px;
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.4s linear;
 	}
-	
-	/*#nav-btn:hover{
-			#FFF 4px solid;
-	}*/
 	#nav-btn > div{
-		width: 20px;
+		width: 18px;
 		height: 3px;
 		background: #FFFFFF;
 		margin: 4px 0px;
 		transition: all 0.4s linear;
 	}
-	/*#nav-btn:hover div{
-		background: #09F;
-	}*/
 	#nav-slide{
-		max-height: 400px;
+		max-height: 430px;
 		position: absolute;
 		right: -250px;
 		margin-top:1%;
@@ -349,5 +482,4 @@
 		color:#FFF;
 		border-radius:5px;
 		z-index:10000;
-	}
 }
