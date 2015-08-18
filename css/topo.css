@@ -287,29 +287,31 @@
 	}
 	/*Menu Slider Movel*/
 	a#menu_slider{
-		background-color: white;
 		border-radius: 5px;
 		padding: 4px 4px 4px 4px;
 		margin: 2px 8px;
 		height:270px;
-		color:#09F;
+		color:#FFFFFF;
 		margin-left:5%;
 		position:relative;
 		text-decoration:none;
 		font-size:16px;
 	}
 	a#menu_slider_logout{
-		background-color: white;
 		border-radius: 5px;
 		padding: 4px 4px 4px 4px;
 		margin: 2px 8px;
 		height:45%;
-		color:#F00;
+		color:#FFFFFF;
 		margin-left:5%;
 		position:relative;
-		text-decoration:none;
 		font-size:16px;
 	}
+	a#menu_slider_logout:hover{
+		text-decoration:none ;
+
+	}
+
 	#nav-btn{
 		position: absolute;
 		top: 3px;
