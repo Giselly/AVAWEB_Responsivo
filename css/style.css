@@ -193,7 +193,7 @@ table.listagem tr td:hover a {
 
 form.cadastro{
     padding: 20px;
-    min-width: 430px;
+    /*min-width: 430px;*/
     width: 76.8229%;
     min-height: 500px;
     margin: 0 auto;
@@ -202,7 +202,7 @@ form.cadastro{
 }
 
 div.inputs{
-    width: 80%;
+    /*width: 80%;*/
     position: relative;
     display: block;
     margin: auto;
@@ -256,16 +256,16 @@ form.cadastro p.subtitulo {
 /** FORM SIMPLES */
 
  form#simples {
-    min-width: 433px;
     padding: 0px;
     margin:auto;
-    width: 55%;
+    /*width: 55%;*/
 }
 
 div.camposFormularioSimples div.inputs{
-    max-width: 310px;
+    /*width: 60%;*/
     padding: 0px;
-    margin:auto;
+    margin:0 auto;
+    
 }
 
 

@@ -1,12 +1,85 @@
- form#simples {
-    min-width: 433px;
+div#botao{
+    max-width: 73px;
+}
+div#botao input{
+    max-width: 73px;
+}
+form#simples {
+    /*width: 433px;*/
     padding: 0px;
     margin:auto;
     width: 55%;
 }
 
+div.camposFormularioSimples {
+    width: 347px;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+
 div.camposFormularioSimples div.inputs{
-    max-width: 310px;
     padding: 0px;
-    margin:auto;
+    margin:0 auto;
+}
+
+@media all and (max-width:1495px){
+    div.camposFormularioSimples div.inputs {
+      width: 1117px;
+    }
+}
+
+@media all and (max-width: 870px){
+    div#botao{
+        width: 73px;
+    }
+    
+    form#simples {
+        width: 500px;
+       
+    }    
+    div.camposFormularioSimples {
+        width: 80%; 
+        
+    }
+
+    div.camposFormularioSimples div.inputs {
+        width: 305px;
+        margin: 0 auto;   
+        padding: 3px;
+    } 
+       
+    div.camposFormularioSimples div.inputs div{
+        width: 305px;
+        margin-top: 20px;
+        
+    }
+
+    div.camposFormularioSimples div.inputs div input{
+        width: 305px;
+        margin: 0 auto;
+        
+    }
+}    
+
+@media all and (max-width: 670px) {
+    form#simples {
+        width: 371px;
+    }
+    div#botao{
+        width: 73px;
+    }
+}
+
+@media all and (max-width: 430px) {
+    form#simples {
+        width: 280px;
+    }
+    div#botao{
+        width: 73px;
+    }
+     div.camposFormularioSimples div.inputs div input{
+        width: 220px;
+     }
+    
 }
