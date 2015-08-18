@@ -229,6 +229,9 @@
 	a{ 
 		color:#FFF;
 	}
+	section#conteudo{
+		margin-top:1%;
+	}
 	header#principal div#logo{
 		display:none;
 	}
@@ -271,6 +274,9 @@
 		display:none;
 	}
 	#menuSistema{
+		display:none;
+	}
+	#paginas{
 		display:none;
 	}
 	section#menuSistema ul li {
@@ -330,8 +336,8 @@
 		background: #09F;
 	}*/
 	#nav-slide{
-		max-height: 270px;
-		position: fixed;
+		max-height: 400px;
+		position: absolute;
 		right: -250px;
 		margin-top:1%;
 		top: 30px;
@@ -339,6 +345,6 @@
 		background: #004c98;
 		transition: right 0.4s linear;
 		color:#FFF;
-		border:double;
+		border-radius:5px;
 	}
 }
