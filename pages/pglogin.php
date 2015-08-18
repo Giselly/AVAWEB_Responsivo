@@ -29,9 +29,9 @@
                 <form id="areaLogin" name="login">
                     <h1>Portal Aluno</h1>
                     <div id="inputs">
-                        <input type="text" name="usuario" class="cpf" id="id"  required="required" maxlength="14" placeholder="CPF" >
+                        <input type="text" name="usuario" class="cpf" id="id"  required maxlength="14" placeholder="CPF" >
                         <br />
-                        <input type="password" name="senha" class="log" id="pass" required="required"  maxlength="20" placeholder="Senha">
+                        <input type="password" name="senha" class="log" id="pass" required  maxlength="20" placeholder="Senha">
                         <br />
                         <p id="info"></p>
                     </div>

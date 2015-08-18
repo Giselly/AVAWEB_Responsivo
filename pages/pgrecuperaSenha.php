@@ -31,7 +31,8 @@
                             <input type="email" name="email" class="log" id="pass" required="required" placeholder="Email">
                             <br />
                             <?php echo $erro . $info; ?>
-                            <input value="Enviar email" type="submit" id="button" name="enviar">
+                            <input value="Enviar email" type="submit" id="button" name="enviar"><br/>
+                            <p id="esqueceuSenha"> <a href="login">&NestedLessLess;Voltar</a></p>
                         </div>
                     </form>
             </div>

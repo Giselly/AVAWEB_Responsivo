@@ -325,6 +325,14 @@ a#bola:hover {
         width: 93%;
     }
     
+    h1 {
+        font-size: 15pt;
+    }
+    
+    p#esqueceuSenha {
+        font-size: 12pt;
+    }
+    
     input[type=text], input[type=password], input[type=email] {
         width: 95%;
     }

@@ -6,17 +6,29 @@
 
             <div>
                 <label for="senhaAtual">Senha atual:</label><br/>
+<<<<<<< HEAD
                 <input type="password" name="senhaAtual" required="required" />
+=======
+                <input type="password" name="senhaAtual" required/>
+>>>>>>> origin/master
             </div>
 
             <div>
                 <label for="novaSenha">Nova senha:</label><br/>
+<<<<<<< HEAD
                 <input type="password" name="novaSenha" required="required" />
+=======
+                <input type="password" name="novaSenha" required/>
+>>>>>>> origin/master
             </div>
 
             <div>
                 <label for="confirmarSenha">Confirmar senha:</label><br/>
+<<<<<<< HEAD
                 <input type="password" name="confirmarSenha" required="required" />
+=======
+                <input type="password" name="confirmarSenha" required/>
+>>>>>>> origin/master
             </div>
 
             <div id="botao">

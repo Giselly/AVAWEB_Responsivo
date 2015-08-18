@@ -25,15 +25,15 @@
         <header id="principal">
         
             <!--logo Full Scren-->
-            <div id="logo">
-            <img src="imagens/logo.gif"></div>
+            <div id="logo"> <a href="treinamento/1/conteudo"><img src="imagens/logo.gif" alt="" title="Voltar a Página Inicial"></a></div>
           	<!--logo Movel Screen-->
-            <div id="logo_res">
-            <img src="imagens/logo3.gif" alt="">
+            <div id="logo_res"> <a href="treinamento/1/conteudo"><img src="imagens/logo3.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
             <!--logo Medium Scren-->
-            <div id="logo_res2">
-            <img src="imagens/logo2.gif" alt="">
+            <div id="logo_res2"> <a href="treinamento/1/conteudo"><img src="imagens/logo2.gif" alt="" title="Voltar a Página Inicial"></a>
+            </div>
+             <!--logo Super Movel Scren-->
+            <div id="logo_res3"> <a href="treinamento/1/conteudo"><img src="imagens/logo4.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
             <div id="tituloSistema">
                 Ambiente Virtual de Aprendizagem
