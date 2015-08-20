@@ -27,7 +27,7 @@
 
                     <div class="media">
                         <label for="apelido">Apelido</label><br/>
-                        <input type="text" name="apelido" required value="<?php echo (isset($dadosUsuario[0]['apelido'])) ? $dadosUsuario[0]['apelido'] : ""; ?>" />
+                        <input type="text" name="apelido" required value="<?php echo (isset($dadosUsuario[0]['apelido'])) ? $dadosUsuario[0]['apelido'] : ""; ?>"  pattern="[a-z A-Z\s]+$" />
                     </div>
 
                     <div class="media">
@@ -37,7 +37,7 @@
 
                     <div  class="media">
                         <label for="nome">Nome completo</label><br/>
-                        <input type="text" name="nome" required value="<?php echo (isset($dadosUsuario[0]['nome'])) ? $dadosUsuario[0]['nome'] : ""; ?>" />
+                        <input type="text" name="nome" required value="<?php echo (isset($dadosUsuario[0]['nome'])) ? $dadosUsuario[0]['nome'] : ""; ?>" pattern="[a-z A-Z\s]+$"  />
                     </div>
 
                     <div>
@@ -47,17 +47,17 @@
 
                     <div>
                         <label for="rg">RG</label><br/>
-                        <input type="text" name="rg" required value="<?php echo (isset($dadosUsuario[0]['rg'])) ? $dadosUsuario[0]['rg'] : ""; ?>" />
+                        <input type="text" name="rg" required maxlength="12" value="<?php echo (isset($dadosUsuario[0]['rg'])) ? $dadosUsuario[0]['rg'] : ""; ?>" pattern="[0-9]+$" />
                     </div>
 
                     <div>
                         <label for="nomeMae">Nome da mãe</label><br/>
-                        <input type="text" name="nomeMae" value="<?php echo (isset($dadosUsuario[0]['nomeMae'])) ? $dadosUsuario[0]['nomeMae'] : ""; ?>" />
+                        <input type="text" name="nomeMae" value="<?php echo (isset($dadosUsuario[0]['nomeMae'])) ? $dadosUsuario[0]['nomeMae'] : ""; ?>" pattern="[a-z A-Z\s]+$"  />
                     </div>
 
                     <div>
                         <label for="nomePai">Nome do pai</label><br/>
-                        <input type="text" name="nomePai" value="<?php echo (isset($dadosUsuario[0]['nomePai'])) ? $dadosUsuario[0]['nomePai'] : ""; ?>" />
+                        <input type="text" name="nomePai" value="<?php echo (isset($dadosUsuario[0]['nomePai'])) ? $dadosUsuario[0]['nomePai'] : ""; ?>" pattern="[a-z A-Z\s]+$" />
                     </div>
 
                     <div>
@@ -67,7 +67,7 @@
 
                     <div id="sexo">
                         <label for="sexo">Sexo</label><br/>
-                        <input type="radio" value="1" required <?php echo ((!isset($dadosUsuario[0]['sexo']) || $dadosUsuario[0]['sexo'] == '1') ? 'checked="checked"' : '' ); ?> name="sexo" />
+                        <input type="radio" value="1" <?php echo ((!isset($dadosUsuario[0]['sexo']) || $dadosUsuario[0]['sexo'] == '1') ? 'checked="checked"' : '' ); ?> name="sexo" required />
                         Masculino
                         <!--<br/>-->
                         <input type="radio" value="0"  <?php echo ((isset($dadosUsuario[0]['sexo']) && $dadosUsuario[0]['sexo'] == '0') ? 'checked="checked"' : '' ); ?> name="sexo" required />
@@ -94,12 +94,12 @@
 
                     <div>
                         <label for="endereco">Endereço</label><br/>
-                        <input type="text" name="endereco" required value="<?php echo (isset($dadosUsuario[0]['endereco'])) ? $dadosUsuario[0]['endereco'] : ""; ?>" />
+                        <input type="text" name="endereco" required value="<?php echo (isset($dadosUsuario[0]['endereco'])) ? $dadosUsuario[0]['endereco'] : ""; ?>" pattern="[a-z A-Z\s]+$" />
                     </div>
 
                     <div>
                         <label for="bairro">Bairro</label><br/>
-                        <input type="text" name="bairro" required value="<?php echo (isset($dadosUsuario[0]['bairro'])) ? $dadosUsuario[0]['bairro'] : ""; ?>" />
+                        <input type="text" name="bairro" required value="<?php echo (isset($dadosUsuario[0]['bairro'])) ? $dadosUsuario[0]['bairro'] : ""; ?>" pattern="[a-z A-Z\s]+$" />
                     </div>
 
                     <div>
