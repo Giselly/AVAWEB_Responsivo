@@ -171,6 +171,11 @@ div.inputs div#dadosGerais div#fotoPerfil {
         text-indent: 0.9em;
         font-size: 10pt;
     }
+    
+    p#tituloPrincipal {
+        width: 300px;
+        text-indent: -4.1em;
+    }
 }
 
 div.inputs div#fotoPerfil img {

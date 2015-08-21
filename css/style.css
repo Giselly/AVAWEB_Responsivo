@@ -64,17 +64,17 @@ footer#rodape{
     text-align: center;
     
 }
-.tudo {
+
+/*.tudo {
    min-height:100%;
    position:relative;
    display: block;
-}
+}*/
 
 footer#rodape div{
     width: 100%;
     background-color: #0f1f30;
     bottom: 0px;
-
 }
 
 footer#rodape p {
@@ -84,6 +84,16 @@ footer#rodape p {
     font-size: 10pt;
     color: white;
     margin: 0px auto;
+}
+
+@media all and (max-width:530px){
+    footer#rodape div {
+        margin-top: -8px;
+    }
+    
+    footer#rodape p {
+        font-size: 8pt;
+    }
 }
 
 /**********************| LISTAGEM |**********************/
