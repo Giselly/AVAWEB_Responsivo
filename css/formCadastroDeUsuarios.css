@@ -140,6 +140,10 @@ div.inputs div#dadosGerais div#fotoPerfil {
 }
 
 @media all and (max-width:530px){
+    div.inputs {
+        margin-left: -10px;
+    }
+    
     div.inputs div#dadosGerais div#fotoPerfil {
         display: block;
         position: relative;
@@ -149,22 +153,23 @@ div.inputs div#dadosGerais div#fotoPerfil {
     }
     
     div.inputs div#dadosGerais div#sexo, div#status {
-        font-size: 10pt;
+        font-size: 9pt;
     }
     
     div#salvar input[type=submit] {
-        font-size: 10pt;
+        font-size: 8pt;
         width: 60px;
         margin-left: 15%;
     }
     
     div#salvar a {
         color: #004c98;
-        font-size: 10pt;
+        font-size: 8pt;
     }
     
     form.cadastro p.subtitulo {
         text-indent: 0.9em;
+        font-size: 10pt;
     }
 }
 
