@@ -336,7 +336,7 @@
 		padding: 4.2px 9px;
 		cursor: pointer;
 		background-color: #003A75;
-		transition: all 0.4s linear;
+		transition: all 0.0s linear;
 	}
 	
 	/*#nav-btn:hover{
@@ -347,7 +347,7 @@
 		height: 4px;
 		background: #FFFFFF;
 		margin: 4px 0px;
-		transition: all 0.4s linear;
+		transition: all 0.0s linear;
 	}
 	/*#nav-btn:hover div{
 		background: #09F;
@@ -470,14 +470,14 @@
 		padding: 1px 6px;
 		cursor: pointer;
 		background-color: #003A75;
-		transition: all 0.4s linear;
+		transition: all 0.0s linear;
 	}
 	#nav-btn > div{
 		width: 18px;
 		height: 3px;
 		background: #FFFFFF;
 		margin: 4px 0px;
-		transition: all 0.4s linear;
+		transition: all 0.0s linear;
 	}
 	#nav-slide{
 		max-height: 400px;
