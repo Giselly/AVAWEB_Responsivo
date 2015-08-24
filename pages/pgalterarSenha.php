@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/alterarDados.css">
+<link rel="stylesheet" type="text/css" href="css/alterarSenha.css">
 <form class="cadastro" id="simples">
     <div class="camposFormularioSimples">
         <div class="inputs">
