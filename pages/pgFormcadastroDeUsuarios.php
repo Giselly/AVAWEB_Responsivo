@@ -47,7 +47,7 @@
 
                     <div>
                         <label for="rg">RG</label><br/>
-                        <input type="text" name="rg" required maxlength="12" value="<?php echo (isset($dadosUsuario[0]['rg'])) ? $dadosUsuario[0]['rg'] : ""; ?>" pattern="[0-9]+$" />
+                        <input type="text" name="rg" required maxlength="12" value="<?php echo (isset($dadosUsuario[0]['rg'])) ? $dadosUsuario[0]['rg'] : ""; ?>" />
                     </div>
 
                     <div>
