@@ -286,6 +286,15 @@ a#bola:hover {
         display: none;
     }
     
+    body {
+        background-color: #004C98;
+        overflow: hidden;
+    }
+    
+    #fundoAzul {
+        margin-top: -80px;
+    }
+    
     #login {
         display: block;
         position: relative;
@@ -305,6 +314,10 @@ a#bola:hover {
 @media all and (max-width:568px){
     body {
         background-color: #004C98;
+    }
+    
+    #fundoAzul {
+        margin: 20px auto;
     }
     
     #login {
