@@ -1,90 +1,45 @@
 <?php
 
 class Capitulo {
+    
+    private $diretorio;
+    private $capitulos;
+    private $path;
 
-    /** @var ConexaoDAO */
-    private $conexao;
-
-    /**
-     * __construct
-     * Inicializa a conexao
-     */
     public function __construct() {
-        $this->conexao = new ConexaoDAO('capitulos');
-    }
-    
-    /**
-     * cadastrar
-     * Cadastra um novo capitulo
-     * 
-     * @param array $dados
-     * @return int
-     */
-    public function cadastrar($dados){
-        return $this->conexao->Cadastrar($dados);
-    }
-    
-    /**
-     * editar
-     * Editar um capitulo existente
-     * 
-     * @param array $dados
-     * @return int
-     */
-    public function editar($dados){
-        return $this->conexao->Editar($dados);
-    }
-    
-    /**
-     * excluir
-     * Exclui um capitulo existente
-     * 
-     * @param int
-     * @return int
-     */
-    public function excluir($id){
-        return $this->conexao->Deletar($id);
-    }
-    
-    
-    /**
-     * buscar
-     * retorna os capitulos cadastrados
-     * 
-     * @param array $dados que serão usuados para filtrar 
-     * @return array
-     */
-    public function buscar($dados = array()){
-        
-        /** @var string */
-        $filtro = "";
-        
-        /** Monta o filtro na consulta */
-        if(count($dados) > 0){
-            $filtro = 'WHERE ' . implode(" LIKE ? OR ", array_keys($dados)) . " LIKE ?";
-        }
-        /** Consulta para retornar os usuarios */
-        $query = "SELECT id, ordem, titulo, subtitulo, conteudo
-                  FROM [tabela]
-                  {$filtro}
-                  ORDER BY ordem";
-                  
-        /** Executa e retorna a consulta */
-        return $this->conexao->Buscar($query, $dados);
+        $this->path = "capitulos/";
+        $this->diretorio = dir($this->path);
     }
 
-    /**
-     * buscarPorID
-     * Retorna os dados de um capitulo especifico
-     * @param string
-     * @return array
-     */
-    public function buscarPorID($id) {
-        $query = "SELECT id, ordem, titulo, subtitulo, conteudo
-                  FROM [tabela] WHERE id = ?";
-        $dados = array($id);
-        return $this->conexao->Buscar($query, $dados);
+    public function Listar($capituloAtual) {
+        while ($pasta = $this->diretorio->read()) {
+            if ($pasta != "." && $pasta != ".." && (int)$pasta < $capituloAtual + 2) {
+                $this->capitulos[$pasta] = array();
+
+                $subdiretorio = dir("{$this->path}{$pasta}/");
+                while ($arquivo = $subdiretorio->read()) {
+                    if ($arquivo != "." && $arquivo != "..")
+                        $this->capitulos[$pasta][] = $this->removerUnderline($arquivo);
+                }
+            }
+        }
+
+        $this->diretorio->close();
+        return $this->capitulos;
     }
+    
+    public function TopicoAtual($capitulo, $topico){
+        include_once "{$this->path}{$capitulo}/" . utf8_decode($this->inserirUnderline($topico));
+    }
+    
+    private function removerUnderline($topico){
+        return substr(str_replace("_", " ", $topico), 0, strlen($topico) - 5);
+    }
+    
+    private function inserirUnderline($topico){
+        return str_replace(" ", "_", $topico) . ".html";
+    }
+    
 
     /**
      * Retorna uma instância única de uma classe.

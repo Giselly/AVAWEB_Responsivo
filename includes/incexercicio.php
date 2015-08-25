@@ -1,10 +1,12 @@
 <?php
 
-/**  */
+/** @var Questao */
 $questoesBusiness = Questao::getInstance();
-$questoes = $questoesBusiness->buscarPorCapitulo($url->getURL(1), $idUsuario);
 
-/** */
+/** @var array dados das questoes selecionadas */
+$questoes = $questoesBusiness->buscarPorCapitulo((int)$url->getURL(1), $idUsuario);
+
+/** @var Exercicio */
 $exerciciosBusiness = Exercicio::getInstance();
 
 /** Recebe o formulario */
@@ -12,8 +14,10 @@ $form = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if(isset($form['salvar'])){
     
-    /** */
+    /** @var int pontuação total do aluno */
     $sum = 0;
+    
+    /**  */
     $qtdQuestoes = 0;    
     
     /** */

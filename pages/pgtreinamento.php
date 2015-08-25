@@ -3,21 +3,36 @@
     <section id="capitulos">
         <ul id="menuCapitulos">
             <?php
-            foreach ($capitulos as $capitulo) {
-                if ($capitulo['ordem'] < $capituloAtual + 2) {
+            foreach ($capitulos as $capitulo => $conteudoCapitulo) {
+                if ((int) $capitulo < $capituloAtual + 2) {
                     ?>
                     <li>
-                        <h3><?php echo $capitulo['titulo']; ?></h3>
+                        <h3>Capítulo <?php echo $capitulo; ?></h3>
                         <ul class="subItens">
                             <?php
-                            
-                            foreach ($topicoBusiness->buscarPorCapitulo($capitulo['id']) as $topico) {
-                                $selecionado = ($topicoAtual[0]['id'] == $topico['id']) ? "id='clicado'" : '';
-                                echo "<li><a {$selecionado} href='treinamento/{$topico['idCapitulo']}/topico/{$topico['id']}'>{$topico['titulo']}</a></li>";
+                            foreach ($conteudoCapitulo as $topico) {
+
+                                /** Link para visualizar este capitulo */
+                                $link = "treinamento/{$capitulo}/topico/" . utf8_encode(inserirUnderline($topico));
+
+                                /** Nome de exibição deste capitulo */
+                                $exibir = utf8_encode($topico);
+
+                                /** Estilo do link selecionado */
+                                $selecionado = ($refTopico == utf8_encode(inserirUnderline($topico)) &&  !($url->posicaoExiste(2) && $url->getURL(2) != "topico")) ? "id='clicado'" : "";
+
+                                echo "<li><a {$selecionado} href='{$link}'>{$exibir}</a></li>";
                             }
+                            
+                            /** @var string indica se o link selecionado é o de exercicios */
+                            $exercicioSel = ($url->posicaoExiste(2) && $url->getURL(2) == "exercicio" && $refCapitulo == $capitulo) ? "id='clicado'" : "";
+                            
+                            /** @var string indica se o link selecionado é o de resumo */
+                            $resumoSel = ($url->posicaoExiste(2) && $url->getURL(2) == "resumo" && $refCapitulo == $capitulo) ? "id='clicado'" : "";
+                            
                             ?>
-                            <li><a <?php echo ($url->getURL(1) == $capitulo['id']) ? $exercicioSelecionado : "" ; ?> href="<?php echo "treinamento/{$topico['idCapitulo']}/exercicio"; ?>">Exercício</a>        
-                            <li><a <?php echo ($url->getURL(1) == $capitulo['id']) ? $resumoSelecionado : "" ; ?> href="<?php echo "treinamento/{$topico['idCapitulo']}/resumo"; ?>">Resumo</a></li>
+                            <li><a <?php echo $exercicioSel; ?> href="<?php echo "treinamento/{$capitulo}/exercicio"; ?>">Exercício</a>        
+                            <li><a <?php echo $resumoSel; ?>href="<?php echo "treinamento/{$capitulo}/resumo"; ?>">Resumo</a></li>
                         </ul>
                     </li>
                     <?php
@@ -28,7 +43,11 @@
     </section>
     <section id="conteudoTopico">
         <?php
-            include_once("includes/inc{$url->getURL(2)}.php");
+        if ($url->posicaoExiste(2)) {
+            include_once('includes/inc' . $url->getURL(2) . '.php');
+        }else{
+            include_once('includes/inctopico.php');
+        }
         ?>    
     </section>
 </section>

@@ -53,17 +53,32 @@
                 <li><a href="cronogramaDoCurso">Cronograma do curso</a></li>
                 <li><a href="notificacoes">Notificações</a></li>
             </ul>
+        </section>   
+         <!--MENU SCREEN MEDIUM-->
+        <!--Button Menu-->
+        <nav id="nav-btn-medium" onclick="slidetoggleMedium()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
+        <!--Menu Slider SCREEN MEDIUM-->
+        <section id="nav-slide-medium">
+        <br>
+            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
+            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider">Cadastro de usuários</a></p><br>
+            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider">Resumos</a></p><br>
+            <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
         </section>
-        
         <!--MENU SCREEN MÓVEL-->
         <!--Button Menu-->
-        <nav id="nav-btn" onclick="slidetoggle()">
+        <nav id="nav-btn-movel" onclick="slidetoggleMovel()">
             <div></div>
             <div></div>
             <div></div>
         </nav>
         <!--Menu Slider SCREEN MOVEL-->
-        <section id="nav-slide">
+        <section id="nav-slide-movel">
         	<br>
             <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
             <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
@@ -74,13 +89,25 @@
             <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>
             <p><a href="notificacoes" id="menu_slider">Notificações</a></p><br>
             <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
-            
-            
         </section>
-        <!--JAVA SCRIPT-->
+        <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
          <script>
-            function slidetoggle(){
-            var slider = document.getElementById("nav-slide");
+            function slidetoggleMedium(){
+            var slider = document.getElementById("nav-slide-medium");
+            slider.style.height = window.innerHeight - 60 + "px";
+            
+            if(slider.style.right == "0px"){
+                slider.style.right = "-250px";
+                
+            }else{
+                slider.style.right = "0px";
+            }
+        }
+        </script>
+        <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN-->
+         <script>
+            function slidetoggleMovel(){
+            var slider = document.getElementById("nav-slide-movel");
             slider.style.height = window.innerHeight - 60 + "px";
             
             if(slider.style.right == "0px"){

@@ -8,13 +8,14 @@ if (file_exists('functions/functions.php')) {
 }
 
 // CONFIGRAÇÕES DO SITE ########################################################
-/** @var string */
-$host = is_string($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : "" ;
+/** @var string */ 
+$host = is_string($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : "" ; 
 
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', 'vertrigo');
 define('DBSA', 'avaweb');
+
 define('RAIZ', "http://{$host}/AVAWEB_Responsivo/");
 
 // AUTO LOAD DE CLASSES ########################################################

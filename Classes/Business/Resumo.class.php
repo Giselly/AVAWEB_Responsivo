@@ -53,12 +53,10 @@ class Resumo {
             $filtro = 'WHERE ' . implode(" LIKE ? OR ", array_keys($dados)) . " LIKE ?";
         }
         /** Consulta para retornar os resumos */        
-        $query = "SELECT r.id, r.idUsuario, u.nome, r.idCapitulo, c.titulo, r.resumo, r.aprovacao, DATE_FORMAT(r.dataAtual, '%d/%m/%Y') dataAtual
+        $query = "SELECT r.id, r.idUsuario, r.capitulo, u.nome, r.resumo, r.aprovacao, DATE_FORMAT(r.dataAtual, '%d/%m/%Y') dataAtual, r.notificacao, DATE_FORMAT(r.dataNotificacao, '%d/%m/%Y') dataNotificacao 
                   FROM resumo as r
                   INNER JOIN usuarios as u
                   ON r.idUsuario = u.id
-                  INNER JOIN capitulos as c
-                  ON r.idCapitulo = c.id
                   {$filtro}
                   ORDER BY r.dataAtual DESC, u.nome ASC";
                   
@@ -73,12 +71,10 @@ class Resumo {
      * @return array
      */
     public function buscarPorID($id) {
-        $query = "SELECT r.id, r.idUsuario, u.nome, r.idCapitulo, c.titulo, r.resumo, r.aprovacao, DATE_FORMAT(r.dataAtual, '%d/%m/%Y') dataAtual  
+        $query = "SELECT r.id, r.idUsuario, r.capitulo, u.nome, r.resumo, r.aprovacao, DATE_FORMAT(r.dataAtual, '%d/%m/%Y') dataAtual, r.notificacao, DATE_FORMAT(r.dataNotificacao, '%d/%m/%Y') dataNotificacao  
                   FROM resumo as r
                   INNER JOIN usuarios as u
                   ON r.idUsuario = u.id
-                  INNER JOIN capitulos as c
-                  ON r.idCapitulo = c.id
                   WHERE r.id = ?";
         $dados = array($id);
         return $this->conexao->Buscar($query, $dados);

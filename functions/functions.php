@@ -17,3 +17,11 @@ function datasql($databr) {
         return $data_sql;
     }
 }
+
+function removerUnderline($txt){
+    return str_replace("_", " ", $txt);
+}
+
+function inserirUnderline($txt){
+    return str_replace(" ", "_", $txt);
+}

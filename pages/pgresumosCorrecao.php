@@ -23,22 +23,16 @@
                         <tr>
                             <td class='align-left'>{$resumo['nome']}</td>
                             <td class='align-left'>{$resumo['dataAtual']}</td>
-                            <td class='align-left'>{$resumo['titulo']}</a></td>";
+                            <td class='align-left'>Capitulo {$resumo['capitulo']}</a></td>";
                             $notificacaoTxt = '';
-                            foreach($dadosNotificacao as $notificacao){
-                                /* echo $resumo['id'];
-                                echo '------';
-                                echo $notificacao['idResumo'];
-                                echo '/'; */
-                                if($resumo['id'] == $notificacao['idResumo']){
-                                    $notificacaoTxt = $notificacao['notificacao'];
+                                if(isset($resumo['notificacao'])){
+                                    $notificacaoTxt = $resumo['notificacao'];
                                 }
-                            }
                             if($notificacaoTxt != ''){
                                 if(strlen($notificacaoTxt) > 28) {
                                     $notificacaoTxt = substr($notificacaoTxt,0, 28). "...";
                                 }                             
-                                echo "<td class='align-left'><a href='{$url->getURL(0)}/lerNotificacao/{$notificacao['id']}'>{$notificacaoTxt}</a></td>";  
+                                echo "<td class='align-left'><a href='{$url->getURL(0)}/lerNotificacao/{$resumo['id']}'>{$notificacaoTxt}</a></td>";  
                             } else {
                                 echo "<td class='align-left'>Nenhuma notificação enviada!</td>"; 
                             }

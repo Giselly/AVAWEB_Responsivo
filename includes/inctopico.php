@@ -1,3 +1,4 @@
 <?php
 
-include_once('pages/pgtopico.php');
+/** */
+$capituloBusiness->TopicoAtual($refCapitulo, $refTopico);
