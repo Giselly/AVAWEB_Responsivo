@@ -270,16 +270,16 @@
 		padding: 4px 4px 4px 4px;
 		margin: 2px 8px;
 		height:45%;
-		color:#FFFFFF;
+		color:#000000;
 		margin-left:5%;
 		position:relative;
 		font-size:16px;
-		background-color: #2d8ac7;
+		background-image:linear-gradient(to bottom, #FFF, #FFF);
 	}
         
-	a#menu_slider_logout:hover{
-		text-decoration:none ;
-	}
+        #nav-slide-medium a#menu_slider_logout:hover {
+           background-image:linear-gradient(to bottom, #FFF, #FFF);
+        }
         
 	#nav-btn-medium{
 		position: absolute;
@@ -304,7 +304,7 @@
 		position: absolute;
                 right: 5px;
 		margin-top:1%;
-		top: 55px;
+		top: 75px;
 		width: 200px;
 		background: #004c98;
 		transition: right 0.4s linear;
@@ -314,7 +314,7 @@
 	}
         
         #nav-slide-medium p a:hover {
-            background-color: #2d8ac7;
+             background-image: url('../imagens/backgroundMenuUsuario.jpg');
         }
         
 	#nav-slide-movel{
@@ -332,15 +332,15 @@
 	* {
 		padding: 0;
 		margin: 0;
-		border: 0;	
-	}
-        
-	a{ 
-		color:#FFF;
+		border: 0;
 	}
         
 	body{
 		overflow-x:hidden;
+	}
+        
+	a{ 
+		color:#FFF;
 	}
         
 	#capitulos{
@@ -356,10 +356,7 @@
 	}
         
 	header#principal div#logo_res{
-		max-width:100%;
-		height: auto;
-		width: 55px;
-		margin-left:0%;
+		display:none;
 	}
         
 	header#principal div#logo_res2{
@@ -367,12 +364,15 @@
 	}
         
 	header#principal div#logo_res3{
-		display:none;
+		max-width:100%;
+		height: auto;
+		width: 55px;
+		margin-left:0%;
 	}
         
 	header#principal div#tituloSistema{
-		padding: 9.5px 0 0 0;
-		font-size: 10.5pt;
+		padding: 8px 0 0 0;
+		font-size: 8pt;
 		color: white;
 		height: 100%;
 		font-family:"Arial Black", Gadget, sans-serif;
@@ -385,15 +385,15 @@
         
 	header#principal{
 		margin-top: 1px;
-		min-width: 350px;
+		min-width: 300px;
 		width: 100%;
-		height: 40px;
+		height: 30px;
 		background-color: #004c98;
 	}
         
 	header#principal div{
 		margin:0%;
-		margin-left:45px;
+		margin-left:35px;
 		position:absolute;
 	}
         
@@ -419,7 +419,7 @@
 		padding: 0 7px 0 2.5px;
 		border-right: 1px solid black;
 	}
-	/*Menu Slider Movel*/
+	/*Menu Slider MOVEL*/
 	a#menu_slider{
 		border-radius: 5px;
 		padding: 4px 4px 4px 4px;
@@ -437,42 +437,42 @@
 		padding: 4px 4px 4px 4px;
 		margin: 2px 8px;
 		height:45%;
-		color:#FFFFFF;
+		color:#000000;
 		margin-left:5%;
 		position:relative;
 		font-size:16px;
-                background-color: #2d8ac7;
                 text-decoration: none;
+                background-color: #FFFFFF;
 	}
-
+        
+	a#menu_slider_logout:hover{
+		text-decoration:none ;
+	}
+        
 	#nav-btn-movel{
 		position: absolute;
 		top: 3px;
 		right: 1%;
-		/*border: #Bababa 1px solid;
-			border-radius: 3px;*/
-		padding: 4.2px 9px;
+		padding: 1px 6px;
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
 	}
-	
+        
 	#nav-btn-movel div{
-		width: 22px;
-		height: 4px;
+		width: 18px;
+		height: 3px;
 		background: #FFFFFF;
 		margin: 4px 0px;
 		transition: all 0.0s linear;
 	}
-	/*#nav-btn:hover div{
-		background: #09F;
-	}*/
+        
 	#nav-slide-movel{
 		max-height: 400px;
 		position: absolute;
 		right: 5px;
 		margin-top:1%;
-		top: 40px;
+		top: 35px;
 		width: 200px;
 		background: #004c98;
 		transition: right 0.4s linear;
@@ -482,11 +482,20 @@
 	}
         
         #nav-slide-movel p a:hover {
-            background-color: #2d8ac7;
+            background-image: url('../imagens/backgroundMenuUsuario.jpg');
+        }
+        
+        #nav-slide-movel div#tcns {
+           background-image: url('../imagens/backgroundMenuUsuario.jpg');
+        }
+        
+        #nav-slide-movel div#tcns p a:hover {
+            background-image: linear-gradient(to bottom, #FFF, #FFF);
+            color: #000000;
         }
         
 	#nav-slide-medium{
-		display:none;	
+		display:none;
 	}
 }
 /*Media Queries SCREEN <370px - SUPER MOVEL SCREEN*/	
@@ -634,7 +643,7 @@
 		position: absolute;
 		right: 5px;
 		margin-top:1%;
-		top: 30px;
+		top: 35px;
 		width: 200px;
 		background: #004c98;
 		transition: right 0.4s linear;

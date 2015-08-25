@@ -56,7 +56,7 @@
         </section>   
          <!--MENU SCREEN MEDIUM-->
         <!--Button Menu-->
-        <nav id="nav-btn-medium" onclick="slidetoggleMedium()">
+        <nav id="nav-btn-medium">
             <div></div>
             <div></div>
             <div></div>
@@ -72,7 +72,7 @@
         </section>
         <!--MENU SCREEN MÓVEL-->
         <!--Button Menu-->
-        <nav id="nav-btn-movel" onclick="slidetoggleMovel()">
+        <nav id="nav-btn-movel">
             <div></div>
             <div></div>
             <div></div>
@@ -94,7 +94,7 @@
         </section>
         <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
             <script>
-                 $(window).ready(function(){
+                 $(document).ready(function(){
                     $("#nav-slide-medium").hide(); 
 
                     $("#nav-btn-medium").click(function(){
@@ -104,7 +104,7 @@
              </script>
         <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN--> 
             <script>
-                $(window).ready(function(){
+                $(document).ready(function(){
                    $("#nav-slide-movel").hide(); 
 
                    $("#nav-btn-movel").click(function(){
