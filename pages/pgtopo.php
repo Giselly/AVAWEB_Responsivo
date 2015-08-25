@@ -63,7 +63,7 @@
         </nav>
         <!--Menu Slider SCREEN MEDIUM-->
         <section id="nav-slide-medium">
-        <br>
+            <br/>
             <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
             <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
             <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider">Cadastro de usuários</a></p><br>
@@ -79,42 +79,36 @@
         </nav>
         <!--Menu Slider SCREEN MOVEL-->
         <section id="nav-slide-movel">
-        	<br>
+            <br/>
             <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
             <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
             <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider">Cadastro de usuários</a></p><br>
             <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider">Resumos</a></p><br>
-            <hr style="background:#FFF; height:1px; text-align:center;"/><br>
-            <p><a href="treinamento" id="menu_slider">Treinamento</a></p><br>
-            <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>
-            <p><a href="notificacoes" id="menu_slider">Notificações</a></p><br>
-            <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
+            <div id="tcns">
+                <br>
+                <p><a href="treinamento" id="menu_slider">Treinamento</a></p><br>
+                <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>
+                <p><a href="notificacoes" id="menu_slider">Notificações</a></p><br>
+                <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
+            </div>
         </section>
         <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
-         <script>
-            function slidetoggleMedium(){
-            var slider = document.getElementById("nav-slide-medium");
-            slider.style.height = window.innerHeight - 60 + "px";
-            
-            if(slider.style.right == "0px"){
-                slider.style.right = "-250px";
-                
-            }else{
-                slider.style.right = "0px";
-            }
-        }
-        </script>
-        <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN-->
-         <script>
-            function slidetoggleMovel(){
-            var slider = document.getElementById("nav-slide-movel");
-            slider.style.height = window.innerHeight - 60 + "px";
-            
-            if(slider.style.right == "0px"){
-                slider.style.right = "-250px";
-                
-            }else{
-                slider.style.right = "0px";
-            }
-        }
-        </script>
+            <script>
+                 $(window).ready(function(){
+                    $("#nav-slide-medium").hide(); 
+
+                    $("#nav-btn-medium").click(function(){
+                        $("#nav-slide-medium").slideToggle("fast");
+                    });
+                 });
+             </script>
+        <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN--> 
+            <script>
+                $(window).ready(function(){
+                   $("#nav-slide-movel").hide(); 
+
+                   $("#nav-btn-movel").click(function(){
+                       $("#nav-slide-movel").slideToggle("fast");
+                   });
+                });
+            </script>
