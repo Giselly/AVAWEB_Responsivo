@@ -107,8 +107,8 @@
 		display:none;
 	}
 }
-/*Media Queries SCREEN >= 535px AND <= 994px - MEDIUM SCREEN*/	
-@media all and (min-width:535px) and (max-width:994px){
+/*Media Queries SCREEN >= 675px AND <= 994px - MEDIUM SCREEN*/	
+@media all and (min-width:675px) and (max-width:994px){
 	* {
 		padding: 0;
 		margin: 0;
@@ -280,8 +280,8 @@
 	
 	
 }
-/*Media Queries SCREEN >=370px AND <=534px - MOVEL SCREEN*/	
-@media all and (min-width:370px) and (max-width:534px){
+/*Media Queries SCREEN >=370px AND <=674px - MOVEL SCREEN*/	
+@media all and (min-width:370px) and (max-width:674px){
 	* {
 		padding: 0;
 		margin: 0;
