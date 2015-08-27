@@ -92,14 +92,28 @@
                 <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
             </div>
         </section>
+        
+        <!JAVA SCRIPT correção de bug do menu de navegação-->
+            <script>
+                $(document).ready(function(){
+                    var tam = $(window).width();
+                    
+                    if(tam < 675 && tam > 994){
+                        $("#nav-slide-medium").css("display","none");
+                    } else (tam < 370 && tam > 674){
+                        $("#nav-slide-movel").css("display","none");
+                    }
+                })
+            </script>
         <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
             <script>
                  $(document).ready(function(){
                     $("#nav-slide-medium").hide(); 
-
+          
                     $("#nav-btn-medium").click(function(){
                         $("#nav-slide-medium").slideToggle("fast");
-                    });
+                        $("#nav-slide-movel").css("display","none");
+                    });   
                  });
              </script>
         <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN--> 
@@ -109,6 +123,7 @@
 
                    $("#nav-btn-movel").click(function(){
                        $("#nav-slide-movel").slideToggle("fast");
+                       $("#nav-slide-medium").css("display","none");
                    });
                 });
             </script>

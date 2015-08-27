@@ -23,9 +23,19 @@ div.camposFormularioSimples div.inputs{
     margin:0 auto;
 }
 
+p#tituloPrincipal{
+    text-align: center;
+    text-indent: -0.8em;
+}
+
 @media all and (max-width:1495px){
     div.camposFormularioSimples div.inputs {
       width: 1117px;
+    }
+    
+    p#tituloPrincipal{
+        text-align: left;
+        text-indent: 2.5em;
     }
 }
 
@@ -78,6 +88,11 @@ div.camposFormularioSimples div.inputs{
 }
 
 @media all and (max-width: 430px) {
+    p#tituloPrincipal {
+        text-align: center;
+        text-indent: -4.8em;
+    }
+    
     form#simples {
         width: 280px;
     }
