@@ -141,7 +141,7 @@ div.inputs div#dadosGerais div#fotoPerfil {
 
 @media all and (max-width:530px){
     div.inputs {
-        margin-left: -10px;
+        margin-left: -8px;
     }
     
     div.inputs div#dadosGerais div#fotoPerfil {
@@ -174,7 +174,7 @@ div.inputs div#dadosGerais div#fotoPerfil {
     
     p#tituloPrincipal {
         width: 300px;
-        text-indent: -4.1em;
+        text-indent: -3.8em;
     }
 }
 

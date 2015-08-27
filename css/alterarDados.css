@@ -60,21 +60,25 @@ p#tituloPrincipal{
     }
 
     div.camposFormularioSimples div.inputs {
-        width: 305px;
+        width: 240px;
         margin: 0 auto;   
         padding: 3px;
     } 
        
     div.camposFormularioSimples div.inputs div{
-        width: 305px;
+        width: 240px;
         margin-top: 20px;
         
     }
 
     div.camposFormularioSimples div.inputs div input{
-        width: 305px;
-        margin: 0 auto;
-        
+        width: 240px;
+        margin: 0 auto; 
+    }
+    
+    p#tituloPrincipal {
+        text-align: left;
+        text-indent: 0.8em;
     }
 }    
 
@@ -90,7 +94,7 @@ p#tituloPrincipal{
 @media all and (max-width: 430px) {
     p#tituloPrincipal {
         text-align: center;
-        text-indent: -4.8em;
+        text-indent: -1.8em;
     }
     
     form#simples {
