@@ -103,7 +103,7 @@
                     } else (tam < 370 && tam > 674){
                         $("#nav-slide-movel").css("display","none");
                     }
-                })
+                });
             </script>
         <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
             <script>
