@@ -144,6 +144,10 @@ div.inputs div#dadosGerais div#fotoPerfil {
         margin-left: -8px;
     }
     
+    div#dadosGerais {
+        margin-left: 5px;
+    }
+    
     div.inputs div#dadosGerais div#fotoPerfil {
         display: block;
         position: relative;
@@ -173,8 +177,8 @@ div.inputs div#dadosGerais div#fotoPerfil {
     }
     
     p#tituloPrincipal {
-        width: 300px;
-        text-indent: -3.8em;
+        width: 200px;
+        text-indent: 1.2em;
     }
 }
 

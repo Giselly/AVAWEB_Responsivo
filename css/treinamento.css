@@ -1,6 +1,6 @@
 section#conteudo{
     width: 99.9%;
-    min-width: 980px;
+    /*min-width: 980px;*/
     border-top:1px solid #454545;
     margin-bottom: 50px;
 }

@@ -30,7 +30,7 @@ p#tituloPrincipal{
 
 @media all and (max-width:1495px){
     div.camposFormularioSimples div.inputs {
-      width: 1117px;
+      width: 400px;
     }
     
     p#tituloPrincipal{
