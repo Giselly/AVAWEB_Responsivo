@@ -148,6 +148,10 @@ div.inputs div#dadosGerais div#fotoPerfil {
         margin-left: 5px;
     }
     
+    div.inputs div#dadosGerais div#sexo{
+        width: 230px;
+    }
+    
     div.inputs div#dadosGerais div#fotoPerfil {
         display: block;
         position: relative;
@@ -157,7 +161,7 @@ div.inputs div#dadosGerais div#fotoPerfil {
     }
     
     div.inputs div#dadosGerais div#sexo, div#status {
-        font-size: 9pt;
+        font-size: 11pt;
     }
     
     div#salvar input[type=submit] {
