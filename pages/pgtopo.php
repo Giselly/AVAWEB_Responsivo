@@ -97,7 +97,7 @@
             </div>
         </section>
         
-        <!--JAVA SCRIPT correção de bug do menu de navegação-->
+        <!--JAVA SCRIPT Menu de navegação-->
             <script>
                 $(document).ready(function(){
                     var tam = $(window).width();
