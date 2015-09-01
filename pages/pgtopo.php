@@ -32,9 +32,13 @@
             <!--logo Medium Scren-->
             <div id="logo_res2"> <a href="treinamento/1/conteudo"><img src="imagens/logo2.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
+            <!--logo Medium Movel Scren-->
+            <div id="logo_res3_1"> <a href="treinamento/1/conteudo"><img src="imagens/logo3_1.png" alt="" title="Voltar a Página Inicial"></a>
+            </div>
              <!--logo Super Movel Scren-->
             <div id="logo_res3"> <a href="treinamento/1/conteudo"><img src="imagens/logo4.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
+             
             <div id="tituloSistema">
                 Ambiente Virtual de Aprendizagem
             </div>
@@ -93,14 +97,14 @@
             </div>
         </section>
         
-        <!JAVA SCRIPT correção de bug do menu de navegação-->
+        <!--JAVA SCRIPT correção de bug do menu de navegação-->
             <script>
                 $(document).ready(function(){
                     var tam = $(window).width();
                     
                     if(tam < 675 && tam > 994){
                         $("#nav-slide-medium").css("display","none");
-                    } else (tam < 370 && tam > 674){
+                    } else if(tam < 370 && tam > 674){
                         $("#nav-slide-movel").css("display","none");
                     }
                 });
