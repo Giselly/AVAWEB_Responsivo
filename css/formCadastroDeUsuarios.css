@@ -181,8 +181,8 @@ div.inputs div#dadosGerais div#fotoPerfil {
     }
     
     p#tituloPrincipal {
-        width: 200px;
-        text-indent: 1.2em;
+        width: 300px;
+        text-indent: -3.8em;
     }
 }
 

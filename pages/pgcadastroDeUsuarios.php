@@ -12,8 +12,8 @@
                 <th>Nome Completo</th>
                 <th>E-mail</th>
                 <th>Status</th>
-                <th>Editar</th>
-                <th>Excluir</th>
+                <th><img src="imagens/editar-2.png" title="Editar"/></th>
+                <th><img src="imagens/lixeira-2.png" title="Excluir"/></th>
             </tr>
             <?php
             if (count($dadosUsuarios)) {
