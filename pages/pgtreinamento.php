@@ -4,7 +4,7 @@
         <ul id="menuCapitulos">
             <?php
             foreach ($capitulos as $capitulo => $conteudoCapitulo) {
-                if ((int) $capitulo < $capituloAtual + 2) {
+                 if ($professor == 1 || (int) $capitulo < $capituloAtual + 2) {
                     ?>
                     <li>
                         <h3>Capítulo <?php echo $capitulo; ?></h3>

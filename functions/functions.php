@@ -18,10 +18,20 @@ function datasql($databr) {
     }
 }
 
-function removerUnderline($txt){
+function removerUnderline($txt) {
     return str_replace("_", " ", $txt);
 }
 
-function inserirUnderline($txt){
+function inserirUnderline($txt) {
     return str_replace(" ", "_", $txt);
+}
+
+function isProfessor($professor) {
+    if (!$professor) {
+        echo '<script language= "JavaScript">
+        alert("Você não possui permissão para acessar esta página.");
+        location.href="' . RAIZ . 'treinamento/01/topico/1.1_-_A_folha_de_papel_em_branco";
+         </script>';
+        exit;
+    }
 }
