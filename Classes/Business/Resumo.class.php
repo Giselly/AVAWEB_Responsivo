@@ -35,6 +35,16 @@ class Resumo {
         return $this->conexao->Editar($dados);
     }
     
+    /**
+     * excluir
+     * Exclui um resumo existente
+     * 
+     * @param int
+     * @return int
+     */
+    public function excluir($id){
+        return $this->conexao->Deletar($id);
+    }    
     
     /**
      * buscar
@@ -78,7 +88,7 @@ class Resumo {
                   WHERE r.id = ?";
         $dados = array($id);
         return $this->conexao->Buscar($query, $dados);
-    }
+    }        
           
     /**
      * Retorna uma instância única de uma classe.

@@ -1,5 +1,8 @@
 <?php
 
+/** Verifica se o usuario logado possui permissão de professor */
+isProfessor($professor);
+
 /** @var Usuario */
 $usuarioBusiness = Usuario::getInstance();
 

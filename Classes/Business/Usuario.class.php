@@ -108,7 +108,7 @@ class Usuario {
      * @return array
      */
     public function buscarPorLogin($dados) {
-        $query = "SELECT id, nome, login, foto, apelido, DATE_FORMAT(dataNascimento, '%d/%m/%Y') dataNascimento, telefone, email, capituloAtual, status FROM [tabela] WHERE login = ? AND senha = ?";
+        $query = "SELECT id, nome, login, foto, apelido, professor, DATE_FORMAT(dataNascimento, '%d/%m/%Y') dataNascimento, telefone, email, capituloAtual, status FROM [tabela] WHERE login = ? AND senha = ?";
         return $this->conexao->Buscar($query, $dados);
     }
 
