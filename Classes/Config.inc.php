@@ -16,7 +16,7 @@ define('USER', 'root');
 define('PASS', 'vertrigo');
 define('DBSA', 'avaweb');
 
-define('RAIZ', "http://{$host}/AvaWeb/");
+define('RAIZ', "http://{$host}/AVAWEB_Responsivo/");
 
 // AUTO LOAD DE CLASSES ########################################################
 function __autoload($Class) {

@@ -32,7 +32,7 @@ class Exercicio {
      * @return array
      */
     public function buscarPorCapituloUsuario($idCapitulo, $idUsuario) {
-        $query = "SELECT COUNT(*) as qtd, MAX(nota) as maiorNota, MAX(data) as data
+        $query = "SELECT COUNT(*) as qtd, MAX(nota) as maiorNota
                   FROM [tabela]
                   WHERE idCapitulo = ? AND idUsuario = ?";
         $dados = array($idCapitulo, $idUsuario);
