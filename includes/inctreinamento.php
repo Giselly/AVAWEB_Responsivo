@@ -4,7 +4,7 @@
 $refCapitulo = $url->posicaoExiste(1) ? $url->getURL(1) : "01";
 
 /** @var string referencia do topico selecionado */
-$refTopico = $url->posicaoExiste(3) ? $url->getURL(3) : "1.1_-_A_folha_de_papel_em_branco";
+$refTopico = $url->posicaoExiste(3) ? $url->getURL(3) : "";
 
 /** @var Capitulo */
 $capituloBusiness = Capitulo::getInstance();

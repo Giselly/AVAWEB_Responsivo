@@ -55,7 +55,11 @@
             <ul>
                 <li><a href="treinamento">Treinamento</a></li>
                 <li><a href="cronogramaDoCurso">Cronograma do curso</a></li>
-                <li><a href="notificacoes">Notificações</a></li>
+                <?php
+                    if(!$professor){
+                        echo '<li><a href="notificacoes">Notificações</a></li>';
+                    }
+                ?>
             </ul>
         </section>   
          <!--MENU SCREEN MEDIUM-->
@@ -91,8 +95,12 @@
             <div id="tcns">
                 <br>
                 <p><a href="treinamento" id="menu_slider">Treinamento</a></p><br>
-                <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>
-                <p><a href="notificacoes" id="menu_slider">Notificações</a></p><br>
+                <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>                
+                <?php
+                    if(!$professor){
+                        echo '<li><a href="notificacoes" id="menu_slider">Notificações</a></li>';
+                    }
+                ?>
                 <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
             </div>
         </section>
