@@ -4,7 +4,7 @@
 $refCapitulo = $url->posicaoExiste(1) ? $url->getURL(1) : "01";
 
 /** @var string referencia do topico selecionado */
-$refTopico = $url->posicaoExiste(3) ? $url->getURL(3) : "01_Cor";
+$refTopico = $url->posicaoExiste(3) ? $url->getURL(3) : "1.1_-_A_folha_de_papel_em_branco";
 
 /** @var Capitulo */
 $capituloBusiness = Capitulo::getInstance();
@@ -12,5 +12,9 @@ $capituloBusiness = Capitulo::getInstance();
 /** @var array listagem dos capitulos */
 $capitulos = $capituloBusiness->Listar($capituloAtual);
 
-/** Inclue a pagina de treinamentos */
-include_once("pages/pgtreinamento.php");
+if ($professor || (int) $refCapitulo < $capituloAtual + 2) {
+    /** Inclue a pagina de treinamentos */
+    include_once("pages/pgtreinamento.php");
+} else {
+    isProfessor(0);
+}
