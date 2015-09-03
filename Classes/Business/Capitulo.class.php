@@ -13,7 +13,7 @@ class Capitulo {
 
     public function Listar($capituloAtual) {
         while ($pasta = $this->diretorio->read()) {
-            if ($pasta != "." && $pasta != ".." && (int)$pasta < $capituloAtual + 2) {
+            if ($pasta != "." && $pasta != ".." && (int)$pasta < $capituloAtual + 19) {
                 $this->capitulos[$pasta] = array();
 
                 $subdiretorio = dir("{$this->path}{$pasta}/");
