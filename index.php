@@ -30,6 +30,12 @@ if ($url->getURL(0) == 'recuperaSenha') {
             $idUsuario = $dadosUsuario[0]['id'];
             
             /**
+             * Indica se o usuario é professor
+             * @var int
+             */
+            $professor = $dadosUsuario[0]['professor'];
+            
+            /**
              * Apelido do usuario logado
              * @var string
              */
