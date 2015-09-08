@@ -296,7 +296,7 @@ input.pesquisa {
 
 /**********************| Media Queries |*********************/
 
-@media all and (max-width:540px){
+@media all and (max-width:540px) and (min-width:335px){
     
     table.listagem {
         margin-left: -7%;
@@ -314,4 +314,27 @@ input.pesquisa {
         float: left;
     }
    
+}
+
+@media all and (max-width:335px){
+    body {
+        overflow: hidden;
+    }
+    
+     table.listagem {
+        margin-left: -14%;
+        width: 85%;
+    }
+    
+     input.novo {
+        margin-left: -14%;
+        margin-right: 0;
+        width: 125%;
+    }
+    
+    input.pesquisa {
+        width: 310px;
+        margin-left: -14%;
+        float: left;
+    }
 }
