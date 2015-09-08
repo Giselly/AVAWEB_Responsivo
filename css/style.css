@@ -293,3 +293,25 @@ input.pesquisa {
     height: 30px;
     width: 250px;
 }
+
+/**********************| Media Queries |*********************/
+
+@media all and (max-width:540px){
+    
+    table.listagem {
+        margin-left: -7%;
+        width: 85%;
+    }
+    
+    input.novo {
+        margin-left: -7%;
+        width: 112%;
+    }
+    
+    input.pesquisa {
+        width: 312px;
+        margin-left: -7%;
+        float: left;
+    }
+   
+}

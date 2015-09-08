@@ -89,7 +89,7 @@
                 <div id="Endereco">
                     <div>
                         <label for="cep">CEP</label><br/>
-                        <input type="text" name="cep" class="cep" required value="<?php echo (isset($dadosUsuario[0]['cep'])) ? $dadosUsuario[0]['cep'] : ""; ?>" />
+                        <input type="text" name="cep" class="cep" required value="<?php echo (isset($dadosUsuario[0]['cep'])) ? $dadosUsuario[0]['cep'] : ""; ?>" pattern="[0-9]+$" />
                     </div>
 
                     <div>
