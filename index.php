@@ -33,7 +33,7 @@ if ($url->getURL(0) == 'recuperaSenha') {
              * Indica se o usuario é professor
              * @var int
              */
-            $professor = (int)$dadosUsuario[0]['professor'];
+            $professor = $dadosUsuario[0]['professor'];
             
             /**
              * Apelido do usuario logado

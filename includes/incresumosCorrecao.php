@@ -40,7 +40,7 @@ if(isset($form['salvar'])){
 
 /** Executa a exclusão de um resumo */
     try {
-        if($url->getURL(1) == 'Excluir') {
+        if(isset($url->getURL(1)) && $url->getURL(1) == 'Excluir') {
         $resumoBusiness->excluir($url->getURL(2));
         echo "<script>window.location = '" . RAIZ . "{$url->getURL(0)}';</script>";
         }
