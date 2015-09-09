@@ -127,6 +127,10 @@ table.listagem td:not(.align-left) {
     text-align: center;
 }
 
+table.listagem td:first-child {
+    width: 20%;
+}
+
 table.listagem td {   
     border: 1px solid #c9c9c9;
     padding: 10px;  
@@ -139,6 +143,15 @@ table.listagem th {
     color: #ffffff;
     font-weight: bold;
 }
+
+table.listagem th img {
+    display: none;
+}
+
+table.listagem th span#nome {
+    display: none;
+}
+
 
 table.listagem tr:nth-child(odd)  td {
     background-color: #f1f1f1;
@@ -298,18 +311,35 @@ input.pesquisa {
 
 @media all and (max-width:540px) and (min-width:335px){
     
+    section.listagemCadastro {
+       margin: auto 11%;
+       position: relative;
+    }
+    
     table.listagem {
         margin-left: -7%;
-        width: 85%;
+        width: 106%;
+    }
+    
+    table.listagem th span {
+        display: none;
+    }
+    
+    table.listagem th span#nome {
+        display: inline;
+    }
+    
+    table.listagem th img {
+        display: inline;
     }
     
     input.novo {
         margin-left: -7%;
-        width: 112%;
+        width: 106%;
     }
     
     input.pesquisa {
-        width: 312px;
+        width: 104%;
         margin-left: -7%;
         float: left;
     }
@@ -322,19 +352,46 @@ input.pesquisa {
     }
     
      table.listagem {
-        margin-left: -14%;
+        margin-left: -10%;
         width: 85%;
     }
     
+    table.listagem th span {
+        display: none;
+    }
+    
+    table.listagem th span#nome {
+        display: inline;
+    }
+    
+    table.listagem th img {
+        display: inline;
+    }
+    
      input.novo {
-        margin-left: -14%;
+        margin-left: -10%;
         margin-right: 0;
-        width: 125%;
+        width: 300px;
     }
     
     input.pesquisa {
-        width: 310px;
-        margin-left: -14%;
+        width: 298px;
+        margin-left: -11%;
         float: left;
+    }
+}
+
+@media all and (max-width:319px){
+    table.listagem {
+        margin-left: -12%;
+    }
+    
+     input.novo {
+        margin-left: -12%;
+    }
+    
+    input.pesquisa {
+        width: 296px;
+        margin-left: -12%;
     }
 }

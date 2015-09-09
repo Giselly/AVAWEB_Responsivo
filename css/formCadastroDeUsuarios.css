@@ -140,6 +140,10 @@ div.inputs div#dadosGerais div#fotoPerfil {
 }
 
 @media all and (max-width:530px){
+    body {
+        overflow-y: scroll;
+    }
+    
     div.inputs {
         margin-left: -8px;
     }
@@ -179,6 +183,17 @@ div.inputs div#dadosGerais div#fotoPerfil {
         text-indent: 0.9em;
         font-size: 10pt;
     }
+    
+    form.cadastro div.inputs p.subtitulo {
+        width: 200px;
+        margin-left: 10%;
+    }
+    
+    p#tituloPrincipal {
+        width: 220px;
+        text-indent: 1.1em;
+    }
+    
     
     p#tituloPrincipal {
         width: 300px;
