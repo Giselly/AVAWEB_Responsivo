@@ -9,11 +9,11 @@
                 <input type="text" placeholder="Pesquisa" class="pesquisa" id="filtro" name="filtro" value="<?php echo (isset($form['filtro']) ? $form['filtro'] : ""); ?>"/>
             </form>
             <tr>
-                <th>Nome Completo</th>
-                <th>E-mail</th>
-                <th>Status</th>
-                <th><img src="imagens/editar-2.png" title="Editar"/></th>
-                <th><img src="imagens/lixeira-2.png" title="Excluir"/></th>
+                <th><span>Nome Completo</span><span id="nome">Nome</span></th>
+                <th><span>E-mail</span><img src="imagens/email-icon.png" title="E-mail" /></th>
+                <th><span>Status</span><img src="imagens/info.png" title="Status" /></th>
+                <th><span>Editar</span><img src="imagens/editar-2.png" title="Editar" /></th>
+                <th><span>Excluir</span><img src="imagens/lixeira-2.png" title="Excluir" /></th>
             </tr>
             <?php
             if (count($dadosUsuarios)) {
