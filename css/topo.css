@@ -84,6 +84,9 @@
 		margin: 0 10px;
 		display:none;
 	}
+	#menuCapitulos{	
+		margin-bottom:100px;
+	}
         
 	section#menuSistema{
 		min-width: 980px;
@@ -207,6 +210,10 @@
 		float:right;
 		display:none;
 	}
+	
+	#menuCapitulos{	
+		margin-bottom:100px;
+	}
         
 	#menu_sair{
 		float: right;
@@ -320,9 +327,9 @@
 		z-index:10000;
 	}
         
-        #nav-slide-medium p a:hover {
-             background-image: url('../imagens/backgroundMenuUsuario.jpg');
-        }
+    #nav-slide-medium p a:hover {
+        background-image: url('../imagens/backgroundMenuUsuario.jpg');
+    }
         
 	#nav-slide-movel{
 		display:none;
@@ -411,6 +418,10 @@
 		height:50%;
 		float:right;
 		display:none;
+	}
+	
+	#menuCapitulos{	
+		margin-bottom:100px;
 	}
         
 	#menu_sair{
@@ -504,7 +515,7 @@
 	#nav-slide-medium{
 		max-height: 250px;
 		position: absolute;
-                right: 5px;
+        right: 5px;
 		margin-top:1%;
 		top: 75px;
 		width: 200px;

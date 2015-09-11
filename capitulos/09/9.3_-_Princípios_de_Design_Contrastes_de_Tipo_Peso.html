@@ -1,0 +1,578 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Documento sem título</title>
+    <!--Estilização da Página-->
+    <style type="text/css">
+		body{
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		#title{
+			margin-left:5%;
+		}
+		#corpo{
+			text-align:justify;
+			margin-left:5%;
+			font-size:17px;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		#img{
+			width:65%;
+			margin-left:5%;
+			margin-bottom:3%;
+			/* Sombra da Imagem */
+			box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+		}	
+		#img1{
+			width:65%;
+			position:relative;
+			}
+		#img2{
+			width:65%;
+			position:relative;
+			margin-left:40%;
+			margin-top:-35%;
+		}
+		#img3{
+			width:65%;
+			position:relative;
+		}
+		#img4{
+			width:65%;
+			position:relative;
+			margin-left:40%;
+			margin-top:-31.5%;
+		}
+		#img5{
+			width:65%;
+			position:relative;
+		}
+		#img6{
+			width:65%;
+			position:relative;
+			margin-left:40%;
+			margin-top:-31.5%;
+		}
+		#img7{
+			margin-left:13%;
+		}
+		/*Media Queries SCREEN >= 995px - FULL SCREEN*/
+		@media all and (min-width:995px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+		}
+				/*Media Queries SCREEN >= 918px AND <= 994px - MEDIUM SCREEN*/
+		@media all and (min-width:918px) and (max-width:994px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:65%;
+			}
+		}
+		/*Media Queries SCREEN >= 851px AND <= 917px*/
+		@media all and (min-width:851px) and (max-width:917px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:61%;
+			}
+		}
+		/*Media Queries SCREEN >= 785px AND <= 850px*/
+		@media all and (min-width:785px) and (max-width:850px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:60%;
+				height:60%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:55%;
+			}
+		}
+		/*Media Queries SCREEN >= 731px AND <= 784px*/
+		@media all and (min-width:731px) and (max-width:784px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:50%;
+			}
+		}
+		/*Media Queries SCREEN >= 710px AND <= 730px*/
+		@media all and (min-width:710px) and (max-width:730px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:50%;
+			}
+		}
+		/*Media Queries SCREEN >= 535px AND <= 709px*/
+		@media all and (min-width:535px) and (max-width:709px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 483px AND <= 534px*/
+		@media all and (min-width:483px) and (max-width:534px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 424px AND <= 484px*/
+		@media all and (min-width:424px) and (max-width:484px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:70%;
+				height:70%;
+				margin-left:20%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 390px AND <= 423px*/
+		@media all and (min-width:390px) and (max-width:423px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:85%;
+				height:85%;
+				margin-left:10%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 365px AND <= 389px*/
+		@media all and (min-width:365px) and (max-width:389px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:85%;
+				height:85%;
+				margin-left:10%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 350px AND <= 364px*/
+		@media all and (min-width:350px) and (max-width:364px){
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:5%;
+			}
+			#corpo{
+				text-align:justify;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:85%;
+				height:85%;
+				margin-left:10%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:90%;
+			}
+		}
+		/*Media Queries SCREEN >= 320px AND <= 349px*/
+		@media all and (min-width:320px) and (max-width:349px){
+			 body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:3%;
+				font-size:17px;
+			}
+			#corpo{
+				text-align:justify;
+				margin-right:3%;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:85%;
+				height:75%;
+				margin-left:5%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:97%;
+				margin-right:3%;
+			}
+		}
+		/*Media Queries SCREEN <= 319px*/
+		@media all and (max-width:319px){
+			 body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#title{
+				margin-left:3%;
+				font-size:17px;
+			}
+			#corpo{
+				text-align:justify;
+				margin-right:5%;
+				font-size:17px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#img{
+				width:95%;
+				height:95%;
+				margin-left:4%;
+				margin-bottom:3%;
+				/* Sombra da Imagem */
+				box-shadow: 0px 10px 0px 9px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.5);
+			}
+			#conteudoTopico{
+				min-width:99%;
+				margin-right:1%;
+			}
+		}
+		/*Media Queries SCREEN >=710px - MEDIUM AND FULL SCREEN*/	
+		@media all and (min-width:710px){
+			#footer_icon{
+				display:none;
+			}
+		}
+		/*Media Queries SCREEN >=370px AND <=674px - MOVEL SCREEN*/	
+		@media all and (min-width:370px) and (max-width:709px){
+			/*footer icon*/
+			#footer_icon{
+				position: fixed !important; 
+				bottom: 70px; 	
+				background:#FFF;
+				z-index:10;
+				height:60px;
+				width:100%;
+				margin-right:18px;
+			}
+			/*Icon B_PREV and B_NEXT*/
+			#b_prev{
+				position:fixed !important;
+				bottom:80px;
+				left:35%;
+			}
+			#b_next{
+				position:fixed !important;
+				bottom:80px;
+				left:55%;
+			}
+			#b_prev:hover{
+				 background-image: url('imagens/b_prev_blue.gif');
+			}
+			#b_next:hover{
+				 background-image: url('imagens/b_next_blue.gif');
+			}
+		}
+		/*Media Queries SCREEN <370px - SUPER MOVEL SCREEN*/
+		@media all and (max-width:369px){
+			/*footer icon*/
+			#footer_icon{
+				position: fixed !important; 
+				bottom: 70px; 	
+				background:#FFF;
+				z-index:10;
+				height:60px;
+				width:100%;
+				margin-right:18px;
+			}
+			/*Icon B_PREV and B_NEXT*/
+			#b_prev{
+				position:fixed !important;
+				bottom:80px;
+				left:35%;
+			}
+			#b_next{
+				position:fixed !important;
+				bottom:80px;
+				left:55%;
+			}
+			#b_prev:hover{
+				 background-image: url('imagens/b_prev_blue.gif');
+			}
+			#b_next:hover{
+				 background-image: url('imagens/b_next_blue.gif');
+			}
+		}
+	</style>
+</head>
+
+<body>
+<p id="title"><strong>9.3  - Peso</strong></p>
+<p>&nbsp;</p>
+<p id="corpo">O peso de uma fonte refere-se à espessura dos traços. A maioria das famílias de tipos é desenhada com vários pesos: regular bold, às vezes semibold, extrabold ou light. Na combinação de pesos, lembre-se daquela regra: não tenha medo. Não contraste o peso regular como semibold: coloque o bold mais forte. Se você combinar tipos de famílias diferentes, uma fonte será sempre mais bold do que a outra; portanto enfatize-a.<br /><br />
+Nenhuma das fontes-padrão que vieram em seu computador tem um estilo muito bold em sua família. Eu o aconselharia a investir em pelo menos uma fonte mais forte. Dê uma olhada nos catálogos de tipos para encontrar uma que o agrade. O contraste de pesos é uma das melhores maneiras de aumentar a estética visual de uma página sem redesenhar algo, mas você nunca poderá alcançar o contraste belo e forte se não tiver uma fonte com traços grandes e fortes.
+<br /><br /><br />
+
+  <img src="imagens/capitulo09/pag148_1.jpg" id="img"  style="border: solid 2px #fff; width:65%;"/>
+    
+<p id="corpo" style="font-style:italic;clear:both;margin-left:5%; font-size:10.5pt; margin-right:18px;"><br>Estes são exemplos dos vários pesos que costumam existir em uma família. Observe que não há muito contraste de peso entre o peso light e o próximo (que costuma ser classificado como regular, médium ou book).<br /><br />
+Também não há um contraste marcante entre os pesos semibold e bold. Se você quiser criar contrastes através do peso das fontes, não tenha medo. Se o contraste não for marcante, parecerá um erro.
+ </p><br /><br /><br />
+ 
+<div id="img1">
+    <img src="imagens/capitulo09/pag149.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    
+<div id="img2">
+    <img src="imagens/capitulo09/pag149_2.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    <br><br><br>
+    <div id="img7">
+    <img src="imagens/capitulo09/pag149_3.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+<p id="corpo" style="font-style:italic;clear:both;margin-left:5%; font-size:10.5pt; margin-right:18px;"><br>Você se lembra desse exemplo na página anterior? Colocando o nome da empresa em caixa-alta e baixa no lugar de caixa-alta, pude aumentar o tamanho do tipo e ampliar o peso, acrescentando mais contraste e interesse visual ao cartão. O peso mais marcante também faz que o cartão tenha um foco mais forte.<br><br><br>
+</p>
+
+<p id="corpo">Além de fazer que a página fique mais interessante aos olhos, o contraste de peso, é uma das melhores maneiras de organizar as informações. Você já faz isso automaticamente quando coloca os títulos e subtítulos de seu newsletter em bold. Então, continue assim e vá mais adiante. Dê uma olhada no sumário a seguir; observe como você compreende instantaneamente a hierarquia de informações quando os títulos-chave ou as frases são colocadas em bold bem forte. Essa técnica também é útil no índice remissivo, pois possibilita que o leitor diferencie num piscar de olhos se uma entrada de índice é de primeiro (item) ou de segundo nível (subitem), eliminando assim a dúvida que costuma seguir quando procuramos alfabeticamente por um item. Observe o índice remissivo deste livro (ou qualquer um dos meus).
+<br><br><br>
+
+<div id="img3">
+    <img src="imagens/capitulo09/pag150.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    
+ 	<div id="img4">
+    <img src="imagens/capitulo09/pag150_2.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    <br><br>
+    
+<p id="corpo" style="font-style:italic;clear:both;margin-left:5%; font-size:10.5pt; margin-right:18px;">Colocando os títulos dos capítulos em fontes mais bold, as informações importantes ficam disponíveis em um piscar de olhos, além de haver uma forte atração que move seus olhos. Outra vantagem é que esse recurso cria uma repetição (um dos quatros princípios do design, lembra?). Também inseri um espaço acima de cada título em bold, de maneira que os títulos poderiam ser agrupados com seus respectivos subtítulos com maior nitidez (este é o princípio de proximidade, lembra?)<br><br><br>
+</p>
+
+<p id="corpo">Se você tiver uma página muito cinza (só de texto colorido), sem espaço para a inserção de figuras ou para criar destaques com aspas, (colocando-as com o mesmo peso de imagens), experimente colocar as frases mais importantes em um bold forte. Elas atrairão o leitor para a página. (Se você utilizar um bold sem serifa com o texto corrido serifado, provavelmente precisará deixar a fonte em bold sem serifa um ponto menos, para que ela pareça estar do mesmo tamanho do texto corrido).
+<br><br>
+
+<div id="img5">
+    <img src="imagens/capitulo09/pag151.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    
+ 	<div id="img6">
+    <img src="imagens/capitulo09/pag151_2.jpg" id="img"  style="border: solid 2px #fff;"/>
+	</div>
+    <br><br>
+
+<p id="corpo" style="font-style:italic;clear:both;margin-left:5%; font-size:10.5pt; margin-right:18px; margin-bottom:160px;">Uma página só com texto corrido desencoraja um leitor a prosseguir na leitura. Com o contraste criado pelo tipo em bold, o leitor pode localizar os pontos-chave e estará mais interessado em buscar as informações.
+</p>
+
+<!--Footer Icon-->
+<div id="footer_icon">
+	<div id="b_prev"><a href="#"> <img src="imagens/b_prev.png" alt="" title="Voltar Capítulo"></a>
+	</div>
+    <div id="b_next"><a href="#"> <img src="imagens/b_next.png" alt="" title="Próximo Capítulo"></a>
+    </div>
+</div>
+
+</body>
+</html>
