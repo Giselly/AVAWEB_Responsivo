@@ -309,11 +309,7 @@ input.pesquisa {
 
 /**********************| Media Queries |*********************/
 
-@media all and (max-width:540px){
-    body {
-        overflow-y: hidden;
-    }
-    
+@media all and (max-width:540px){   
     section.listagemCadastro {
        margin: auto 11%;
        position: relative;
@@ -350,9 +346,6 @@ input.pesquisa {
 }
 
 @media all and (max-width:370px){
-    body {
-        overflow-y: hidden;
-    }
     
     section.listagemCadastro {
        margin: auto 9%;
@@ -372,9 +365,6 @@ input.pesquisa {
 }
 
 @media all and (max-width:335px){
-    body {
-        overflow-y: hidden;
-    }
     
      table.listagem {
         margin-left: -10%;
