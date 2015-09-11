@@ -309,7 +309,10 @@ input.pesquisa {
 
 /**********************| Media Queries |*********************/
 
-@media all and (max-width:540px) and (min-width:335px){
+@media all and (max-width:540px){
+    body {
+        overflow-y: hidden;
+    }
     
     section.listagemCadastro {
        margin: auto 11%;
@@ -346,9 +349,31 @@ input.pesquisa {
    
 }
 
+@media all and (max-width:370px){
+    body {
+        overflow-y: hidden;
+    }
+    
+    section.listagemCadastro {
+       margin: auto 9%;
+    }
+    
+    input.novo {
+        margin-left: -8%;
+        margin-right: 0;
+        width: 300px;
+    }
+    
+    input.pesquisa {
+        width: 294px;
+        margin-left: -8%;
+        float: left;
+    }
+}
+
 @media all and (max-width:335px){
     body {
-        overflow: hidden;
+        overflow-y: hidden;
     }
     
      table.listagem {
@@ -368,7 +393,7 @@ input.pesquisa {
         display: inline;
     }
     
-     input.novo {
+    input.novo {
         margin-left: -10%;
         margin-right: 0;
         width: 300px;
