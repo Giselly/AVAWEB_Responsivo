@@ -23,8 +23,8 @@
                         <td class='align-left'>{$usuario['nome']}</td>
                         <td class='align-left'>{$usuario['email']}</td>
                         <td id='status'><input type='checkbox' disabled='disabled' " . (($usuario['status']) ? "checked='checked'" : "") . " /></td>
-                        <td id='editar'><a href='{$url->getURL(0)}/editar/{$usuario['id']}'><img src='imagens/editar.png' title='Editar''/></a></td>
-                        <td id='excluir'><a class='exluirFuncionario' href='{$usuario['id']}'><img src='imagens/lixeira.gif' title='Excluir'/> </a></td>
+                        <td id='editar'><a href='{$url->getURL(0)}/editar/{$usuario['id']}'><img src='imagens/editar.png' title='Editar' /></a></td>
+                        <td id='excluir'><a class='exluirFuncionario' href='{$usuario['id']}'><img src='imagens/lixeira.gif' title='Excluir' /></a></td>
                     </tr>
                 ";
                 }
@@ -32,7 +32,7 @@
                 echo "<tr><td colspan='6'>Nenhum usuário encontrado.</td></tr>";
             }
             ?>
-
+            
         </table>
     </div>
     <a href='#frmExcluir' name='frmExcluir' rel='leanModal' id='btnExcluir'></a>
