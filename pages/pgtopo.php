@@ -64,11 +64,13 @@
         </section>   
          <!--MENU SCREEN MEDIUM-->
         <!--Button Menu-->
-        <nav id="nav-btn-medium">
-            <div></div>
-            <div></div>
-            <div></div>
-        </nav>
+        <a href="#" rel="modal">
+            <nav id="nav-btn-medium">
+                <div></div>
+                <div></div>
+                <div></div>
+            </nav>
+        </a>
         <!--Menu Slider SCREEN MEDIUM-->
         <section id="nav-slide-medium">
             <br/>
@@ -80,11 +82,13 @@
         </section>
         <!--MENU SCREEN MÓVEL-->
         <!--Button Menu-->
-        <nav id="nav-btn-movel">
-            <div></div>
-            <div></div>
-            <div></div>
-        </nav>
+        <a href="#" rel="modal">
+            <nav id="nav-btn-movel">
+                <div></div>
+                <div></div>
+                <div></div>
+            </nav>
+        </a>
         <!--Menu Slider SCREEN MOVEL-->
         <section id="nav-slide-movel">
             <br/>
@@ -105,6 +109,7 @@
             </div>
         </section>
         
+        <div id="mascara"></div>
         <!--JAVA SCRIPT Menu de navegação-->
             <script>
                 $(document).ready(function(){
@@ -136,6 +141,47 @@
                    $("#nav-btn-movel").click(function(){
                        $("#nav-slide-movel").slideToggle("fast");
                        $("#nav-slide-medium").css("display","none");
-                   });
+                    });
                 });
             </script>
+            
+        <!-- Mascara da pagina -->
+        <script>
+            $(document).ready(function(){
+             $("a[rel=modal]").click( function(ev){
+                ev.preventDefault();
+
+                var id = $(this).attr("href");
+
+                var alturaTela = $(document).height();
+                var larguraTela = $(window).width();
+
+                //colocando o fundo preto
+                $('#mascara').css({'width':larguraTela,'height':alturaTela});
+                $('#mascara').fadeToggle(); 
+                $('#mascara').fadeTo("fast",0.8);
+
+                var left = ($(window).width() /2) - ( $(id).width() / 2 );
+                var top = ($(window).height() / 2) - ( $(id).height() / 2 );
+
+                $(id).css({'top':top,'left':left});
+                $(id).show();   
+            });
+
+                $("#mascara").click( function(){
+                    $(this).hide();
+                    $("#nav-slide-medium").slideUp();
+                    $("#nav-slide-movel").slideUp();
+                });
+            });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $("a[rel=modal]").dblclick(function(){
+                    $("#mascara").hide();
+                    $("#nav-slide-medium").hide();
+                    $("#nav-slide-movel").hide();
+                });
+            })
+        </script>

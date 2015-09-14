@@ -1,6 +1,16 @@
 @charset "UTF-8";
 /*Media Queries SCREEN >= 995px - FULL SCREEN*/
 
+#mascara{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:rgba(0,0,0,.8);
+}
+ 
+
 @media all and (min-width:995px){
 	* {
 		padding: 0;
@@ -303,6 +313,7 @@
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
+                z-index: 9999;
 	}
         
 	#nav-btn-medium div{
@@ -502,6 +513,7 @@
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
+                z-index: 9999;
 	}
         
 	#nav-btn-medium div{
@@ -515,7 +527,7 @@
 	#nav-slide-medium{
 		max-height: 250px;
 		position: absolute;
-        right: 5px;
+                right: 5px;
 		margin-top:1%;
 		top: 75px;
 		width: 200px;
@@ -697,6 +709,7 @@
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
+                z-index: 9999;
 	}
         
 	#nav-btn-medium div{
@@ -851,8 +864,8 @@
 		margin-left:5%;
 		position:relative;
 		font-size:16px;
-        text-decoration: none;
-        background-color: #FFFFFF;
+                text-decoration: none;
+                background-color: #FFFFFF;
 	}
         
 	a#menu_slider_logout:hover{
@@ -867,6 +880,7 @@
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
+                z-index: 9999;
 	}
         
 	#nav-btn-movel div{
