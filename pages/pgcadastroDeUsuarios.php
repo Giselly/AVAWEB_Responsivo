@@ -12,19 +12,19 @@
                 <th><span>Nome Completo</span><span id="nome">Nome</span></th>
                 <th><span>E-mail</span><img src="imagens/email-icon.png" title="E-mail" /></th>
                 <th><span>Status</span><img src="imagens/info.png" title="Status" /></th>
-                <th><span>Editar</span><img src="imagens/editar-2.png" title="Editar" /></th>
-                <th><span>Excluir</span><img src="imagens/lixeira-2.png" title="Excluir" /></th>
+                <th><span>Editar</span><img src="imagens/editar-b.png" title="Editar" /></th>
+                <th><span>Excluir</span><img src="imagens/lixeira-b.png" title="Excluir" /></th>
             </tr>
             <?php
             if (count($dadosUsuarios)) {
                 foreach ($dadosUsuarios as $usuario) {
                     echo "
-                    <tr>
+                    <tr id='dados'>
                         <td class='align-left'>{$usuario['nome']}</td>
                         <td class='align-left'>{$usuario['email']}</td>
                         <td id='status'><input type='checkbox' disabled='disabled' " . (($usuario['status']) ? "checked='checked'" : "") . " /></td>
-                        <td id='editar'><a href='{$url->getURL(0)}/editar/{$usuario['id']}'><img src='imagens/editar.png' title='Editar' /></a></td>
-                        <td id='excluir'><a class='exluirFuncionario' href='{$usuario['id']}'><img src='imagens/lixeira.gif' title='Excluir' /></a></td>
+                        <td id='editar'><a href='{$url->getURL(0)}/editar/{$usuario['id']}'><img id='imgE' src='imagens/editar.png' title='Editar' /></a></td>
+                        <td id='excluir'><a class='exluirFuncionario' href='{$usuario['id']}'><img id='imgL' src='imagens/lixeira.gif' title='Excluir' /></a></td>
                     </tr>
                 ";
                 }

@@ -351,15 +351,20 @@ input.pesquisa {
        margin: auto 9%;
     }
     
+    table.listagem {
+        margin-left: -5%;
+        width: 106%;
+    }
+    
     input.novo {
-        margin-left: -8%;
+        margin-left: -5%;
         margin-right: 0;
         width: 300px;
     }
     
     input.pesquisa {
         width: 294px;
-        margin-left: -8%;
+        margin-left: -5%;
         float: left;
     }
 }

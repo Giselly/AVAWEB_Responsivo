@@ -8,22 +8,22 @@
             <input type="text" placeholder="Pesquisa" class="pesquisa" id="filtro" name="filtro" value="<?php echo (isset($form['filtro']) ? $form['filtro'] : ""); ?>"/>
             </form>
             <tr>
-                <th>Nome Completo</th>
-                <th>Data</th>
-                <th>Capítulo</th>
-                <th>Notificação</th>
-                <th>Ler</th>
-                <th>Excluir</th>
+                <th><span>Nome Completo</span><span id="nome">Nome</span></th>
+                <th><span>Data</span><img src="imagens/data-b.png" title="Data" /></th>
+                <th><span>Capítulo</span><img src="imagens/cap-b.png" title="Capítulo" /></th>
+                <th><span>Notificação</span><img src="imagens/notificacao-b.png" title="Notificação" /></th>
+                <th><span>Ler</span><img src="imagens/ler-b.png" title="Ler" /></th>
+                <th><span>Excluir</span><img src="imagens/lixeira-b.png" title="Excluir" /></th>
             </tr>
             <?php
             if(isset($dadosResumo)){
                 if (count($dadosResumo)) {
                     foreach ($dadosResumo as $resumo) {
                         echo "
-                        <tr>
+                        <tr id='dados'>
                             <td class='align-left'>{$resumo['nome']}</td>
-                            <td class='align-left'>{$resumo['dataAtual']}</td>
-                            <td class='align-left'>Capitulo {$resumo['capitulo']}</a></td>";
+                            <td>{$resumo['dataAtual']}</td>
+                            <td>Capitulo {$resumo['capitulo']}</a></td>";
                             $notificacaoTxt = '';
                                 if(isset($resumo['notificacao'])){
                                     $notificacaoTxt = $resumo['notificacao'];
@@ -34,12 +34,12 @@
                                 }                             
                                 echo "<td class='align-left'><a href='{$url->getURL(0)}/lerNotificacao/{$resumo['id']}'>{$notificacaoTxt}</a></td>";  
                             } else {
-                                echo "<td class='align-left'>Nenhuma notificação enviada!</td>"; 
+                                echo "<td>Nenhuma notificação enviada!</td>"; 
                             }
                             
                         echo "
-                            <td id='ler'><a href='{$url->getURL(0)}/lerResumos/{$resumo['id']}'>Ler</a></td>
-                            <td id='excluir'><a class='exluirFuncionario' href='{$resumo['id']}'>Excluir</a></td>
+                            <td id='ler'><a href='{$url->getURL(0)}/lerResumos/{$resumo['id']}'><img id='imgL' src='imagens/ler.png' title='Ler'/></a></td>
+                            <td id='excluir'><a class='exluirFuncionario' href='{$resumo['id']}'><img id='imgE' src='imagens/lixeira.gif' title='Excluir'/></a></td>
                         </tr>
                     ";
                     }
@@ -68,3 +68,19 @@
         </div>
     </form>
 </div>
+
+<!-- Scrpit para altenar de icone -->
+<script type="text/javascript">
+       $(document).ready(function(){
+          
+          $('tr#dados').mouseover(function(){
+            $('img#imgL').attr('src','imagens/ler-b.png');
+            $('img#imgE').attr('src','imagens/lixeira-b.png');
+          }); 
+          
+          $('tr#dados').mouseout(function(){
+            $('img#imgL').attr('src','imagens/ler.png');
+            $('img#imgE').attr('src','imagens/lixeira.gif');
+          }); 
+       });
+    </script>
