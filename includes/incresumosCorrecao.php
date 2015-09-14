@@ -6,6 +6,9 @@ isProfessor($professor);
 /**@var Resumo */
 $resumoBusiness = Resumo::getInstance();
 
+/** @var Usuario */
+$usuarioBusiness = Usuario::getInstance();
+
 /** busca dados da tabela resumo no banco*/
 $dadosResumo = $resumoBusiness->buscar();
 
@@ -15,38 +18,37 @@ $form = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if($url->posicaoExiste( 1) && $url->getURL(1) == 'lerResumos'){ 
     /** Include da pagina do resumo */   
     include_once("pages/pg{$url->getURL(1)}.php");
+        
+} else if($url->posicaoExiste( 1) && $url->getURL(1) == 'Excluir') {
+    $dados = array (
+        "id" => $url->getURL(2),
+        "excluidoResumo" => 1
     
-/** Insere a notificação no banco */    
-}else {
+    );
+    $resumoBusiness->editar($dados);
+} else {
     /** Include da pagina de resumos para correção */
     include_once("pages/pgresumosCorrecao.php");
 }
 
 if(isset($form['salvar'])){
-    $dados = array(
-        "id" => $url->getURL(2),
-        "notificacao" => $form["content"],
-        "dataNotificacao" => date('Y-m-d'),
-        "aprovacao"=> $form["aprovacao"]
-    );
-        
-        
+        $dados = array(
+            "id" => $url->getURL(2),
+            "assunto" => isset($form["assunto"]) ? $form["assunto"]: NULL,
+            "notificacao" => isset($form["content"]) ? $form["content"]: NULL,
+            "dataNotificacao" => isset($form["content"]) ? date('Y-m-d') : NULL,
+            "aprovacao"=> ($form["aprovacao"]!= 0) ? $form["aprovacao"] : 0
+        );
+    
     $resumoBusiness->editar($dados);
-     
-    //$host = is_string($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : "" ; 
-     echo "<script>window.location = '" . RAIZ . "{$url->getURL(1)}';</script>";
-    //echo "<script>window.location(http://{$host}/AvaWeb/pgresumosCorrecao.php)</script>";
+    if($form["aprovacao"] == 1){
+    $dadosUsuario = array (
+        "id" => $form["idUsuario"],
+        "capituloAtual" => $capituloAtual+1
+    );   
+       
+    $usuarioBusiness->editar($dadosUsuario);
+    }
+    var_dump($dadosUsuario);
 } 
 
-/** Executa a exclusão de um resumo */
-    try {
-        if(isset($url->getURL(1)) && $url->getURL(1) == 'Excluir') {
-        $resumoBusiness->excluir($url->getURL(2));
-        echo "<script>window.location = '" . RAIZ . "{$url->getURL(0)}';</script>";
-        }
-    } catch (Exception $ex) {
-       
-        //echo "<script>window.location = '" . RAIZ . "{$url->getURL(0)}/erro/{$url->getURL(2)}';</script>";
-    }
-
-    exit;
