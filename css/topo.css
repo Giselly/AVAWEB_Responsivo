@@ -4,6 +4,7 @@
 #mascara{
     display:none;
     position:absolute;
+    width:100%;
     left:0;
     top:0;
     z-index:9000;
@@ -338,9 +339,9 @@
 		z-index:10000;
 	}
         
-    #nav-slide-medium p a:hover {
-        background-image: url('../imagens/backgroundMenuUsuario.jpg');
-    }
+        #nav-slide-medium p a:hover {
+            background-image: url('../imagens/backgroundMenuUsuario.jpg');
+        }
         
 	#nav-slide-movel{
 		display:none;
@@ -348,7 +349,7 @@
         
 	#paginas{
 		display:none;
-	}	
+	}
 }
 /*Media Queries SCREEN >=530px AND <=709px - MEDIUM MOVEL SCREEN*/	
 @media all and (min-width:530px) and (max-width:709px){
@@ -538,9 +539,9 @@
 		z-index:10000;
 	}
         
-    #nav-slide-medium p a:hover {
-        background-image: url('../imagens/backgroundMenuUsuario.jpg');
-    }
+        #nav-slide-medium p a:hover {
+            background-image: url('../imagens/backgroundMenuUsuario.jpg');
+        }
         
 	#nav-slide-movel{
 		display:none;

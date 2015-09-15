@@ -110,18 +110,19 @@
         </section>
         
         <div id="mascara"></div>
+        
         <!--JAVA SCRIPT Menu de navegação-->
-            <script>
-                $(document).ready(function(){
-                    var tam = $(window).width();
-                    
-                    if(tam < 675 && tam > 994){
-                        $("#nav-slide-medium").css("display","none");
-                    } else if(tam < 370 && tam > 674){
-                        $("#nav-slide-movel").css("display","none");
-                    }
-                });
-            </script>
+          <script>
+              $(document).ready(function(){
+
+                  if(screen.width < 675 && screen.width > 994){
+                      $("#nav-slide-medium").css({"display":"none"});
+                  } else if(screen.width < 370 && screen.width > 674){
+                      $("#nav-slide-movel").css({"display":"none"});
+                  }
+              });
+          </script>
+          
         <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
             <script>
                  $(document).ready(function(){
@@ -129,7 +130,7 @@
           
                     $("#nav-btn-medium").click(function(){
                         $("#nav-slide-medium").slideToggle("fast");
-                        $("#nav-slide-movel").css("display","none");
+                        $("#nav-slide-movel").css({"display":"none"});
                     });   
                  });
              </script>
@@ -140,12 +141,12 @@
 
                    $("#nav-btn-movel").click(function(){
                        $("#nav-slide-movel").slideToggle("fast");
-                       $("#nav-slide-medium").css("display","none");
+                       $("#nav-slide-medium").css({"display":"none"});
                     });
                 });
             </script>
             
-        <!-- Mascara da pagina -->
+        <!-- Mascara da página -->
         <script>
             $(document).ready(function(){
              $("a[rel=modal]").click( function(ev){
@@ -154,17 +155,15 @@
                 var id = $(this).attr("href");
 
                 var alturaTela = $(document).height();
-                var larguraTela = $(window).width();
 
                 //colocando o fundo preto
-                $('#mascara').css({'width':larguraTela,'height':alturaTela});
+                $('#mascara').css({'height':alturaTela});
                 $('#mascara').fadeToggle(); 
                 $('#mascara').fadeTo("fast",0.8);
 
-                var left = ($(window).width() /2) - ( $(id).width() / 2 );
                 var top = ($(window).height() / 2) - ( $(id).height() / 2 );
 
-                $(id).css({'top':top,'left':left});
+                $(id).css({'top':top});
                 $(id).show();   
             });
 
@@ -174,14 +173,4 @@
                     $("#nav-slide-movel").slideUp();
                 });
             });
-        </script>
-        
-        <script>
-            $(document).ready(function(){
-                $("a[rel=modal]").dblclick(function(){
-                    $("#mascara").hide();
-                    $("#nav-slide-medium").hide();
-                    $("#nav-slide-movel").hide();
-                });
-            })
         </script>
