@@ -21,11 +21,14 @@
         <link rel="shortcut icon" href="imagens/icon.ico" type="image/gif">
     </head>
     <body>
+    	<!--<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo" >-->
+        
         <input type="hidden" value="<?php echo RAIZ; ?>" id="raiz" />
         <header id="principal">
         
             <!--logo Full Scren-->
-            <div id="logo"> <a href="treinamento/1/conteudo"><img src="imagens/logo.gif" alt="" title="Voltar a Página Inicial"></a></div>
+            <div id="logo"> <a href="treinamento/1/conteudo"><img src="imagens/logo.gif" alt="" title="Voltar a Página Inicial"></a>
+            </div>
           	<!--logo Movel Screen-->
             <div id="logo_res"> <a href="treinamento/1/conteudo"><img src="imagens/logo3.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
@@ -35,9 +38,11 @@
             <!--logo Medium Movel Scren-->
             <div id="logo_res3_1"> <a href="treinamento/1/conteudo"><img src="imagens/logo3_1.png" alt="" title="Voltar a Página Inicial"></a>
             </div>
-             <!--logo Super Movel Scren-->
+            <!--logo Super Movel Scren-->
             <div id="logo_res3"> <a href="treinamento/1/conteudo"><img src="imagens/logo4.gif" alt="" title="Voltar a Página Inicial"></a>
             </div>
+            <!--Button Back_To_Top Super Movel Screen-->
+            <div id="voltarTopo"></div>
              
             <div id="tituloSistema">
                 Ambiente Virtual de Aprendizagem
@@ -108,9 +113,28 @@
                 <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
             </div>
         </section>
-        
         <div id="mascara"></div>
-        
+
+		<script>
+			
+			$(document).ready(function() {
+				$("#voltarTopo").hide();
+			
+				$(window).scroll(function () {
+			
+				if ($(this).scrollTop() > 300) {
+					$('#voltarTopo').fadeIn();
+				} else {
+					$('#voltarTopo').fadeOut();
+				}
+			});
+			
+			$('#voltarTopo').click(function() {
+				$('body,html').animate({scrollTop:0},600);
+			}); 
+		    });
+		</script>
+    
         <!--JAVA SCRIPT Menu de navegação-->
           <script>
               $(document).ready(function(){
@@ -174,3 +198,8 @@
                 });
             });
         </script>
+        
+       
+        
+        
+        

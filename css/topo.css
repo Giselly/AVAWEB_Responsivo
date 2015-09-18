@@ -143,6 +143,11 @@
 	#nav-slide-movel{
 		display:none;
 	}
+	
+	/*Button Back_To_Top*/
+	#voltarTopo{
+		display:none;
+	}
 }
 /*Media Queries SCREEN >= 710px AND <= 994px - MEDIUM SCREEN*/	
 @media all and (min-width:710px) and (max-width:994px){
@@ -302,9 +307,9 @@
 		background-image:linear-gradient(to bottom, #FFF, #FFF);
 	}
         
-        #nav-slide-medium a#menu_slider_logout:hover {
-           background-image:linear-gradient(to bottom, #FFF, #FFF);
-        }
+    #nav-slide-medium a#menu_slider_logout:hover {
+        background-image:linear-gradient(to bottom, #FFF, #FFF);
+    }
         
 	#nav-btn-medium{
 		position: absolute;
@@ -339,9 +344,9 @@
 		z-index:10000;
 	}
         
-        #nav-slide-medium p a:hover {
-            background-image: url('../imagens/backgroundMenuUsuario.jpg');
-        }
+    #nav-slide-medium p a:hover {
+        background-image: url('../imagens/backgroundMenuUsuario.jpg');
+    }
         
 	#nav-slide-movel{
 		display:none;
@@ -349,6 +354,36 @@
         
 	#paginas{
 		display:none;
+	}
+	/*Button Back_To_Top*/
+	#voltarTopo{
+		background-image: url('../imagens/timthumb.png');
+		width: 40px;
+		height: 40px;
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:90px;
+		text-transform: uppercase;
+		opacity: 0.2;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
+	}
+	
+	#voltarTopo:hover{
+		background-image: url('../imagens/timthumb1.png');
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:90px;
+		text-transform: uppercase;
+		opacity: 0.6;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
 	}
 }
 /*Media Queries SCREEN >=530px AND <=709px - MEDIUM MOVEL SCREEN*/	
@@ -372,7 +407,16 @@
 	#capitulos{
 		display:none;
 	}
-      
+    
+	/*Icon Back To Top*/
+	#icon_back_to_top{
+		position:fixed !important;
+		bottom:80px;
+		right:20px;
+		bottom:75px;
+		z-index:999;
+	} 
+	
 	header#principal{
 		margin-top: 12px;
 		min-width: 500px;
@@ -539,9 +583,9 @@
 		z-index:10000;
 	}
         
-        #nav-slide-medium p a:hover {
-            background-image: url('../imagens/backgroundMenuUsuario.jpg');
-        }
+    #nav-slide-medium p a:hover {
+        background-image: url('../imagens/backgroundMenuUsuario.jpg');
+    }
         
 	#nav-slide-movel{
 		display:none;
@@ -549,6 +593,36 @@
         
 	#paginas{
 		display:none;
+	}
+	/*Button Back_To_Top*/
+	#voltarTopo{
+		background-image: url('../imagens/timthumb.png');
+		width: 40px;
+		height: 40px;
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.2;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
+	}
+	
+	#voltarTopo:hover{
+		background-image: url('../imagens/timthumb1.png');
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.6;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
 	}
 }
 /*Media Queries SCREEN >=420px AND <=529px - MOVEL SCREEN*/	
@@ -571,6 +645,15 @@
 	
 	#capitulos{
 		display:none;
+	}
+	
+	/*Icon Back To Top*/
+	#icon_back_to_top{
+		position:fixed !important;
+		bottom:80px;
+		right:20px;
+		bottom:75px;
+		z-index:999;
 	}
       
 	header#principal{
@@ -710,7 +793,7 @@
 		cursor: pointer;
 		background-color: #003A75;
 		transition: all 0.0s linear;
-                z-index: 9999;
+        z-index: 9999;
 	}
         
 	#nav-btn-medium div{
@@ -746,6 +829,37 @@
 	#paginas{
 		display:none;
 	}
+	
+	/*Button Back_To_Top*/
+	#voltarTopo{
+		background-image: url('../imagens/timthumb.png');
+		width: 40px;
+		height: 40px;
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.2;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
+	}
+	
+	#voltarTopo:hover{
+		background-image: url('../imagens/timthumb1.png');
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.6;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
+	}
 }
 /*Media Queries SCREEN <419px - SUPER MOVEL SCREEN*/	
 @media all and (max-width:419px){
@@ -766,9 +880,18 @@
 	#capitulos{
 		display:none;
 	}
-        
+	
 	section#conteudo{
 		margin-top:1%;
+	}
+	
+	/*Icon Back To Top*/
+	#icon_back_to_top{
+		position:fixed !important;
+		bottom:80px;
+		right:20px;
+		bottom:75px;
+		z-index:999;
 	}
         
 	header#principal div#logo{
@@ -865,8 +988,8 @@
 		margin-left:5%;
 		position:relative;
 		font-size:16px;
-                text-decoration: none;
-                background-color: #FFFFFF;
+        text-decoration: none;
+        background-color: #FFFFFF;
 	}
         
 	a#menu_slider_logout:hover{
@@ -921,5 +1044,36 @@
         
 	#nav-slide-medium{
 		display:none;	
+	}
+	
+	/*Button Back_To_Top*/
+	#voltarTopo{
+		background-image: url('../imagens/timthumb.png');
+		width: 40px;
+		height: 40px;
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.2;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
+	}
+	
+	#voltarTopo:hover{
+		background-image: url('../imagens/timthumb1.png');
+		position:fixed !important;
+		right:10px;
+		display: block;
+		font-weight: bold;
+		bottom:130px;
+		text-transform: uppercase;
+		opacity: 0.6;
+   		filter: alpha(opacity=40);
+		cursor:pointer;
+		z-index:9999;
 	}
 }
