@@ -12,7 +12,8 @@ $capituloBusiness = Capitulo::getInstance();
 /** @var array listagem dos capitulos */
 $capitulos = $capituloBusiness->Listar($capituloAtual);
 
-if ($professor || (int) $refCapitulo < $capituloAtual + 2) {
+
+if ($professor || (int) $refCapitulo < $capituloAtual + 2) {    
     /** Inclue a pagina de treinamentos */
     include_once("pages/pgtreinamento.php");
 } else {
