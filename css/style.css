@@ -30,7 +30,7 @@ body{
 /* Cor do indicador de rolagem - ao passar o mouse */
 ::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:horizontal:hover {
-    background-color: #5EA4EA;   
+    background-color: #0095DC;   
 }
 
 /** CONFIGURAÇÃO DO MENU LATERAL */
