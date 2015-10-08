@@ -21,7 +21,6 @@
         <link rel="shortcut icon" href="imagens/icon.ico" type="image/gif">
     </head>
     <body>
-    	<!--<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo" >-->
         
         <input type="hidden" value="<?php echo RAIZ; ?>" id="raiz" />
         <header id="principal">
@@ -43,6 +42,8 @@
             </div>
             <!--Button Back_To_Top Super Movel Screen-->
             <div id="voltarTopo"></div>
+            <!--Button Altern Full Screen-->
+            <div id="alternFullScreen"  class="alternFullScreen" onclick="toggleFullScreen()" data-tooltip="Ampliar Tela / Desampliar Tela"></div>
              
             <div id="tituloSistema">
                 Ambiente Virtual de Aprendizagem
@@ -67,7 +68,7 @@
                 ?>
             </ul>
         </section>   
-         <!--MENU SCREEN MEDIUM-->
+        <!--MENU SCREEN MEDIUM-->
         <!--Button Menu-->
         <a href="#" rel="modal">
             <nav id="nav-btn-medium">
@@ -79,10 +80,10 @@
         <!--Menu Slider SCREEN MEDIUM-->
         <section id="nav-slide-medium">
             <br/>
-            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
-            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
-            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider">Cadastro de usuários</a></p><br>
-            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider">Resumos</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider" class="alterar_dados">Alterar dados</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider" class="alterar_senha">Alterar senha</a></p><br>
+            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider" class="cadastro_de_usuarios">Cadastro de usuários</a></p><br>
+            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider" class="resumos">Resumos</a></p><br>
             <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
         </section>
         <!--MENU SCREEN MÓVEL-->
@@ -94,17 +95,28 @@
                 <div></div>
             </nav>
         </a>
+        
         <!--Menu Slider SCREEN MOVEL-->
         <section id="nav-slide-movel">
             <br/>
-            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider">Alterar dados</a></p><br>
-            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider">Alterar senha</a></p><br>
-            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider">Cadastro de usuários</a></p><br>
-            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider">Resumos</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider" class="alterar_dados">Alterar dados</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider" class="alterar_senha">Alterar senha</a></p><br>
+            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider" class="cadastro">Cadastro de usuários</a></p><br>
+            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider" class="resumos">Resumos</a></p><br>
+        </section>
+        
+        <!--Menu Slider SCREEN SUPER MOVEL-->
+        <section id="nav-slide-super-movel">
+            <br/>
+            <p><a <?php if($url->getURL(0) == "alterarDados") echo "class='selecionado'"; ?>href="alterarDados" id="menu_slider" class="alterar_dados">Alterar dados</a></p><br>
+            <p><a <?php if($url->getURL(0) == "alterarSenha") echo "class='selecionado'"; ?>href="alterarSenha" id="menu_slider" class="alterar_senha">Alterar senha</a></p><br>
+            <p><a <?php if($url->getURL(0) == "cadastroDeUsuarios") echo "class='selecionado'"; ?>href="cadastroDeUsuarios"  id="menu_slider" class="cadastro">Cadastro de usuários</a></p><br>
+            <p><a <?php if($url->getURL(0) == "resumosCorrecao") echo "class='selecionado'"; ?>href="resumosCorrecao"  id="menu_slider" class="resumos">Resumos</a></p><br>
             <div id="tcns">
                 <br>
-                <p><a href="treinamento" id="menu_slider">Treinamento</a></p><br>
-                <p><a href="cronogramaDoCurso" id="menu_slider">Cronograma do curso</a></p><br>                
+                <p><a id="menu_slider-right">Capítulos</a></p><br>
+                <p><a href="treinamento" id="menu_slider" class="treinamento">Treinamento</a></p><br>
+                <p><a href="cronogramaDoCurso" id="menu_slider" class="cronograma_do_curso">Cronograma do curso</a></p><br>                
                 <?php
                     if(!$professor){
                         echo '<li><a href="notificacoes" id="menu_slider">Notificações</a></li>';
@@ -113,10 +125,18 @@
                 <p><a href="logout" id="menu_slider_logout">Sair</a></p><br>
             </div>
         </section>
+        <!--Menu Slider Lateral SCREEN MOVEL-->
+        <section id="nav-slide-movel-right">
+            <h3 id="tituloCapitulo-movel"><?php echo isset($topicoAtual[0]['capitulo']) ? $topicoAtual[0]['capitulo'] : 'Não há capítulos listados!'; ?></h2>
+            <h3 id="subtituloCapitulo-movel"><?php echo isset($topicoAtual[0]['titulo']) ? ($topicoAtual[0]['titulo']) . ": " . $topicoAtual[0]['subtitulo'] : ''; ?></h3>
+            <p id="conteudoTopico-movel"><?php echo isset($topicoAtual[0]['conteudo']) ? $topicoAtual[0]['conteudo'] : 'Não há conteúdo!';  ?></p>
+            <p ><a id="button-back-menu_right">«Voltar</a></p>
+        </section>
+        
         <div id="mascara"></div>
 
+		<!--JAVASCRIPT Back_To_Top - MEDIUM, MOVEL, SUPER-MOVEL SCREEN-->
 		<script>
-			
 			$(document).ready(function() {
 				$("#voltarTopo").hide();
 			
@@ -145,9 +165,9 @@
                       $("#nav-slide-movel").css({"display":"none"});
                   }
               });
-          </script>
+         	</script>
           
-        <!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
+        	<!--JAVA SCRIPT Menu Slider - MEDIUM SCREEN-->
             <script>
                  $(document).ready(function(){
                     $("#nav-slide-medium").hide(); 
@@ -155,16 +175,31 @@
                     $("#nav-btn-medium").click(function(){
                         $("#nav-slide-medium").slideToggle("fast");
                         $("#nav-slide-movel").css({"display":"none"});
+						$("#nav-slide-super-movel").css({"display":"none"});
                     });   
                  });
-             </script>
-        <!--JAVA SCRIPT Menu Slider - MOVEL SCREEN--> 
+            </script>
+            
+        	<!--JAVA SCRIPT Menu Slider - SUPER MOVEL SCREEN--> 
             <script>
                 $(document).ready(function(){
-                   $("#nav-slide-movel").hide(); 
+                   $("#nav-slide-super-movel").hide(); 
 
                    $("#nav-btn-movel").click(function(){
-                       $("#nav-slide-movel").slideToggle("fast");
+                       $("#nav-slide-super-movel").slideToggle("fast");
+                       $("#nav-slide-medium").css({"display":"none"});
+					   $("#nav-slide-movel").css({"display":"none"});
+                    });
+                });
+            </script>
+            
+            <!--JAVA SCRIPT Menu Slider Right - MOVEL SCREEN--> 
+            <script>
+                $(document).ready(function(){
+                   $("#nav-slide-movel-right").hide(); 
+
+                   $("#menu_slider-right").click(function(){
+                       $("#nav-slide-movel-right").slideToggle("fast");
                        $("#nav-slide-medium").css({"display":"none"});
                     });
                 });
@@ -190,16 +225,54 @@
                 $(id).css({'top':top});
                 $(id).show();   
             });
-
+			
+			<!--JAVA SCRIPT Button - Menu Slider Right - MOVEL SCREEN-->
+			$('#button-back-menu_right').click(function(){
+				$('#nav-slide-movel-right').slideToggle("fast");
+			});
+			
                 $("#mascara").click( function(){
                     $(this).hide();
                     $("#nav-slide-medium").slideUp();
                     $("#nav-slide-movel").slideUp();
+					$("#nav-slide-super-movel").slideUp();
+					$("#nav-slide-movel-right").slideUp();
                 });
             });
         </script>
         
-       
-        
-        
-        
+        <!--JAVA SCRIPT Button - Altern Full Screen - FULL SCREEN-->
+        <script>
+			function toggleFullScreen() {
+			  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+			   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+				if (document.documentElement.requestFullScreen) {  
+				  document.documentElement.requestFullScreen();  
+				} else if (document.documentElement.mozRequestFullScreen) {  
+				  document.documentElement.mozRequestFullScreen();  
+				} else if (document.documentElement.webkitRequestFullScreen) {  
+				  document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+				}  
+			  } else {  
+				if (document.cancelFullScreen) {  
+				  document.cancelFullScreen();  
+				} else if (document.mozCancelFullScreen) {  
+				  document.mozCancelFullScreen();  
+				} else if (document.webkitCancelFullScreen) {  
+				  document.webkitCancelFullScreen();  
+				}  
+			  }  
+			} 
+			
+			<!--JQUERY - Changes image by clicking/	Expand - Demagnifying - FULL SCREEN--> 
+			$(document).ready(function(){
+				$('#alternFullScreen').click(function(){
+					if($(this).hasClass('alternFullScreen'))
+						$(this).addClass('alternFullScreen_b').removeClass('alternFullScreen');
+				
+					else
+						$(this).addClass('alternFullScreen').removeClass('alternFullScreen_b');
+					});
+			});
+			
+	   </script>

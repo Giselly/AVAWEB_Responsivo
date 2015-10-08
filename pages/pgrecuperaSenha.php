@@ -27,13 +27,13 @@
                     <form id="areaLogin" method="post">
                         <h1>Redefinição de senha</h1>
                         <div id="inputs">
-                            <input type="text" name="usuario" class="id" id="id" required="required" placeholder="Nome Completo" >
+                            <input type="text" name="usuario" class="id" id="id" required placeholder="Nome Completo" >
                             <br />
-                            <input type="email" name="email" class="log" id="pass" required="required" placeholder="Email">
+                            <input type="email" name="email" class="log" id="pass" required placeholder="Email">
                             <br />
                             <?php echo $erro . $info; ?>
                             <input value="Enviar email" type="submit" id="button" name="enviar"><br/>
-                            <p id="esqueceuSenha"> <a href="login">&NestedLessLess;Voltar</a></p>
+                            <p id="esqueceuSenha"> <a href="login">«Voltar</a></p>
                         </div>
                     </form>
             </div>
